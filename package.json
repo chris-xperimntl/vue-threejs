@@ -80,7 +80,7 @@
     "eslint-plugin-vue": "^9.23.0",
     "husky": "^7.0.4",
     "jsdom": "^25.0.0",
-    "lint-staged": "^12.3.7",
+    "lint-staged": "^16.4.0",
     "postprocessing": "^6.38.3",
     "prettier": "^2.6.1",
     "pretty-quick": "^3.1.3",
