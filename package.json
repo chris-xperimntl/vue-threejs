@@ -79,7 +79,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.23.0",
     "husky": "^7.0.4",
-    "jsdom": "^29.0.0",
+    "jsdom": "^29.0.1",
     "lint-staged": "^16.4.0",
     "postprocessing": "^6.38.3",
     "prettier": "^3.5.3",
