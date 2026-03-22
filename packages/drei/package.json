@@ -1,7 +1,6 @@
 {
   "name": "@bluera/vue-threejs-drei",
   "version": "1.0.0",
-  "private": true,
   "description": "Vue-native helpers for @bluera/vue-threejs",
   "license": "MIT",
   "main": "dist/bluera-vue-threejs-drei.cjs.js",

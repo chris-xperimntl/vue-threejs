@@ -24,6 +24,42 @@ npm install @bluera/vue-threejs three
 npm run dev
 ```
 
+### Suppress custom element warnings
+
+vue-threejs renders Three.js objects through a custom renderer, so Vue's template compiler
+doesn't recognise tags like `<mesh>` or `<boxGeometry>`. To remove the warnings, pass
+`templateCompilerOptions` to the Vue plugin:
+
+```ts
+// vite.config.ts
+import vue from '@vitejs/plugin-vue'
+import { templateCompilerOptions } from '@bluera/vue-threejs'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [vue(templateCompilerOptions)],
+})
+```
+
+If you already customise the Vue plugin options, use `isCustomElement` directly:
+
+```ts
+import vue from '@vitejs/plugin-vue'
+import { isCustomElement } from '@bluera/vue-threejs'
+
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => isCustomElement(tag) || tag.startsWith('my-'),
+        },
+      },
+    }),
+  ],
+})
+```
+
 ## Nuxt
 
 Works out of the box. You may need to add three to the `transpile` option:

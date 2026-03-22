@@ -1,7 +1,6 @@
 {
   "name": "@bluera/vue-threejs-test-renderer",
   "version": "1.0.0",
-  "private": true,
   "description": "Test renderer for @bluera/vue-threejs.",
   "license": "MIT",
   "main": "dist/bluera-vue-threejs-test-renderer.cjs.js",

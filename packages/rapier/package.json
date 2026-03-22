@@ -1,7 +1,6 @@
 {
   "name": "@bluera/vue-threejs-rapier",
   "version": "1.0.0",
-  "private": true,
   "description": "Vue-native physics for @bluera/vue-threejs using Rapier",
   "license": "MIT",
   "main": "dist/bluera-vue-threejs-rapier.cjs.js",
