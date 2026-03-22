@@ -82,7 +82,7 @@
     "jsdom": "^29.0.0",
     "lint-staged": "^16.4.0",
     "postprocessing": "^6.38.3",
-    "prettier": "^3.5.3",
+    "prettier": "^3.8.1",
     "pretty-quick": "^4.0.0",
     "stats.js": "^0.17.0",
     "three": "^0.183.2",
