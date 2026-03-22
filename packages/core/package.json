@@ -31,12 +31,12 @@
     "prebuild": "node -e \"require('node:fs').copyFileSync('../../README.md','README.md')\""
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.8",
+    "@babel/runtime": "^7.29.2",
     "@types/webxr": "*",
     "@vueuse/core": "^10.0.0",
     "base64-js": "^1.5.1",
     "buffer": "^6.0.3",
-    "zustand": "^5.0.3"
+    "zustand": "^5.0.12"
   },
   "peerDependencies": {
     "vue": ">=3.3",

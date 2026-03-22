@@ -2589,15 +2589,15 @@ var DracoDecoderModule = (() => {
                     f = (F[f >> 2] + F[(f + 16) >> 2]) | 0
                     e = F[(($[F[(F[a >> 2] + 32) >> 2]](a) | 0) + 32) >> 2]
                     e = (F[(e + 8) >> 2] - F[(e + 16) >> 2]) | 0
-                    ;(O = b),
+                    ;((O = b),
                       (P = H[(F[(($[F[(F[a >> 2] + 32) >> 2]](a) | 0) + 32) >> 2] + 38) >> 1]),
-                      (E[(O + 38) >> 1] = P)
+                      (E[(O + 38) >> 1] = P))
                     F[b >> 2] = f
                     F[(b + 16) >> 2] = 0
                     F[(b + 20) >> 2] = 0
                     F[(b + 8) >> 2] = e
                     F[(b + 12) >> 2] = 0
-                    ;(O = b), (P = $[F[(F[a >> 2] + 36) >> 2]](a) | 0), (F[(O + 148) >> 2] = P)
+                    ;((O = b), (P = $[F[(F[a >> 2] + 36) >> 2]](a) | 0), (F[(O + 148) >> 2] = P))
                     F[(a + 372) >> 2] = k
                     F[(a + 384) >> 2] = d + F[(a + 156) >> 2]
                     K = Ja((u + 8) | 0)
@@ -2665,7 +2665,7 @@ var DracoDecoderModule = (() => {
                             if (b >>> 0 <= (((o - f) | 0) / 12) >>> 0) {
                               if (b) {
                                 b = (L(b, 12) - 12) | 0
-                                b = (((b - ((b >>> 0) % 12 | 0)) | 0) + 12) | 0
+                                b = (((b - (((b >>> 0) % 12) | 0)) | 0) + 12) | 0
                                 f = (ma(f, 0, b) + b) | 0
                               }
                               F[(e + 4) >> 2] = f
@@ -2689,7 +2689,7 @@ var DracoDecoderModule = (() => {
                                     }
                                     d = (L(g, 12) + h) | 0
                                     b = (L(b, 12) - 12) | 0
-                                    g = (((b - ((b >>> 0) % 12 | 0)) | 0) + 12) | 0
+                                    g = (((b - (((b >>> 0) % 12) | 0)) | 0) + 12) | 0
                                     b = ma(d, 0, g)
                                     g = (b + g) | 0
                                     h = (L(o, 12) + h) | 0
@@ -2914,7 +2914,7 @@ var DracoDecoderModule = (() => {
                                                 break x
                                               }
                                               p = (e + 1) | 0
-                                              p = (p >>> 0) % 3 | 0 ? p : (e - 2) | 0
+                                              p = ((p >>> 0) % 3) | 0 ? p : (e - 2) | 0
                                               g = -1
                                               if ((p | 0) == -1) {
                                                 break x
@@ -2924,7 +2924,7 @@ var DracoDecoderModule = (() => {
                                             n = F[(B + (g << 2)) >> 2]
                                             if ((n | 0) != -1) {
                                               i = (n + 1) | 0
-                                              i = (i >>> 0) % 3 | 0 ? i : (n - 2) | 0
+                                              i = ((i >>> 0) % 3) | 0 ? i : (n - 2) | 0
                                             }
                                             if (
                                               (((e | 0) != -1) & (F[(F[(m + 12) >> 2] + (e << 2)) >> 2] != -1)) |
@@ -2952,7 +2952,7 @@ var DracoDecoderModule = (() => {
                                                 break y
                                               }
                                               z: {
-                                                if ((e >>> 0) % 3 | 0) {
+                                                if (((e >>> 0) % 3) | 0) {
                                                   e = (e - 1) | 0
                                                   break z
                                                 }
@@ -2970,7 +2970,7 @@ var DracoDecoderModule = (() => {
                                                 break A
                                               }
                                               h = (i + 1) | 0
-                                              h = (h >>> 0) % 3 | 0 ? h : (i - 2) | 0
+                                              h = ((h >>> 0) % 3) | 0 ? h : (i - 2) | 0
                                               if ((h | 0) == -1) {
                                                 break A
                                               }
@@ -2988,7 +2988,7 @@ var DracoDecoderModule = (() => {
                                             }
                                             a = (F[(j + 120) >> 2] + ((g >>> 3) & 536870908)) | 0
                                             e = F[a >> 2]
-                                            ;(O = a), (P = oi(g) & e), (F[O >> 2] = P)
+                                            ;((O = a), (P = oi(g) & e), (F[O >> 2] = P))
                                             F[t >> 2] = p
                                             e = b
                                             kc(J, p)
@@ -3040,7 +3040,7 @@ var DracoDecoderModule = (() => {
                                                   D: {
                                                     E: {
                                                       F: {
-                                                        if ((e >>> 0) % 3 | 0) {
+                                                        if (((e >>> 0) % 3) | 0) {
                                                           i = (e - 1) | 0
                                                           break F
                                                         }
@@ -3060,7 +3060,7 @@ var DracoDecoderModule = (() => {
                                                     F[(a + (g << 2)) >> 2] = -1
                                                   }
                                                   i = (e + 1) | 0
-                                                  e = (i >>> 0) % 3 | 0 ? i : (e - 2) | 0
+                                                  e = ((i >>> 0) % 3) | 0 ? i : (e - 2) | 0
                                                   i = -1
                                                   if ((e | 0) == -1) {
                                                     break C
@@ -3101,7 +3101,7 @@ var DracoDecoderModule = (() => {
                                               if (a >>> 0 < n >>> 0) {
                                                 break H
                                               }
-                                              a = (h >>> 0) % (n >>> 0) | 0
+                                              a = ((h >>> 0) % (n >>> 0)) | 0
                                             }
                                             i = a
                                             a = F[(g + (i << 2)) >> 2]
@@ -3141,7 +3141,7 @@ var DracoDecoderModule = (() => {
                                                 K: {
                                                   if ((g | 0) != (h | 0)) {
                                                     if (g >>> 0 >= n >>> 0) {
-                                                      g = (g >>> 0) % (n >>> 0) | 0
+                                                      g = ((g >>> 0) % (n >>> 0)) | 0
                                                     }
                                                     if ((g | 0) == (i | 0)) {
                                                       break K
@@ -3236,7 +3236,7 @@ var DracoDecoderModule = (() => {
                                             M: {
                                               N: {
                                                 if (!i) {
-                                                  if ((a >>> 0) % 3 | 0) {
+                                                  if (((a >>> 0) % 3) | 0) {
                                                     h = (a - 1) | 0
                                                     break N
                                                   }
@@ -3259,7 +3259,7 @@ var DracoDecoderModule = (() => {
                                             }
                                             F[((p << 2) + i) >> 2] = h
                                             r = (a + 1) | 0
-                                            a = (r >>> 0) % 3 | 0 ? r : (a - 2) | 0
+                                            a = ((r >>> 0) % 3) | 0 ? r : (a - 2) | 0
                                             r = -1
                                             if ((a | 0) == -1) {
                                               break L
@@ -3277,7 +3277,7 @@ var DracoDecoderModule = (() => {
                                             P: {
                                               Q: {
                                                 R: {
-                                                  if ((m >>> 0) % 3 | 0) {
+                                                  if (((m >>> 0) % 3) | 0) {
                                                     a = (m - 1) | 0
                                                     break R
                                                   }
@@ -3298,7 +3298,7 @@ var DracoDecoderModule = (() => {
                                             }
                                             r = -1
                                             a = (m + 1) | 0
-                                            a = (a >>> 0) % 3 | 0 ? a : (m - 2) | 0
+                                            a = ((a >>> 0) % 3) | 0 ? a : (m - 2) | 0
                                             c = -1
                                             if ((a | 0) == -1) {
                                               break O
@@ -3323,7 +3323,7 @@ var DracoDecoderModule = (() => {
                                             if ((a | 0) != -1) {
                                               F[((a << 2) + i) >> 2] = h
                                               t = (a + 1) | 0
-                                              a = (t >>> 0) % 3 | 0 ? t : (a - 2) | 0
+                                              a = ((t >>> 0) % 3) | 0 ? t : (a - 2) | 0
                                               g = -1
                                               S: {
                                                 if ((a | 0) == -1) {
@@ -3335,7 +3335,7 @@ var DracoDecoderModule = (() => {
                                                   break S
                                                 }
                                                 g = (a + 1) | 0
-                                                g = (g >>> 0) % 3 | 0 ? g : (a - 2) | 0
+                                                g = ((g >>> 0) % 3) | 0 ? g : (a - 2) | 0
                                               }
                                               a = g
                                               if ((c | 0) != (a | 0)) {
@@ -3527,7 +3527,7 @@ var DracoDecoderModule = (() => {
                                               break Y
                                             }
                                             c = (a + 1) | 0
-                                            c = (c >>> 0) % 3 | 0 ? c : (a - 2) | 0
+                                            c = ((c >>> 0) % 3) | 0 ? c : (a - 2) | 0
                                             break Y
                                           }
                                           c = -1
@@ -3535,7 +3535,7 @@ var DracoDecoderModule = (() => {
                                             break Y
                                           }
                                           c = (a - 1) | 0
-                                          if ((a >>> 0) % 3 | 0) {
+                                          if (((a >>> 0) % 3) | 0) {
                                             break Y
                                           }
                                           c = (a + 2) | 0
@@ -3573,7 +3573,7 @@ var DracoDecoderModule = (() => {
                                                 break Z
                                               }
                                               c = (a + 1) | 0
-                                              c = (c >>> 0) % 3 | 0 ? c : (a - 2) | 0
+                                              c = ((c >>> 0) % 3) | 0 ? c : (a - 2) | 0
                                               break Z
                                             }
                                             c = -1
@@ -3581,7 +3581,7 @@ var DracoDecoderModule = (() => {
                                               break Z
                                             }
                                             c = (a - 1) | 0
-                                            if ((a >>> 0) % 3 | 0) {
+                                            if (((a >>> 0) % 3) | 0) {
                                               break Z
                                             }
                                             c = (a + 2) | 0
@@ -3639,7 +3639,7 @@ var DracoDecoderModule = (() => {
                                           break $
                                         }
                                         e = (q + 1) | 0
-                                        e = (e >>> 0) % 3 | 0 ? e : (q - 2) | 0
+                                        e = ((e >>> 0) % 3) | 0 ? e : (q - 2) | 0
                                         a = -1
                                         if ((e | 0) == -1) {
                                           break $
@@ -3657,13 +3657,13 @@ var DracoDecoderModule = (() => {
                                         h = 1
                                         c = -1
                                         d = (a + 1) | 0
-                                        a = (d >>> 0) % 3 | 0 ? d : (a - 2) | 0
+                                        a = ((d >>> 0) % 3) | 0 ? d : (a - 2) | 0
                                         if ((a | 0) == -1) {
                                           break aa
                                         }
                                         h = 0
                                         b = (a + 1) | 0
-                                        b = (b >>> 0) % 3 | 0 ? b : (a - 2) | 0
+                                        b = ((b >>> 0) % 3) | 0 ? b : (a - 2) | 0
                                         if ((b | 0) != -1) {
                                           c = F[(o + (b << 2)) >> 2]
                                         }
@@ -3674,7 +3674,7 @@ var DracoDecoderModule = (() => {
                                       i = F[(i + (c << 2)) >> 2]
                                       if ((i | 0) != -1) {
                                         d = (i + 1) | 0
-                                        d = (d >>> 0) % 3 | 0 ? d : (i - 2) | 0
+                                        d = ((d >>> 0) % 3) | 0 ? d : (i - 2) | 0
                                       }
                                       if (
                                         ((b | 0) == (q | 0)) |
@@ -3698,7 +3698,7 @@ var DracoDecoderModule = (() => {
                                           break r
                                         }
                                         a = (d + 1) | 0
-                                        a = (a >>> 0) % 3 | 0 ? a : (d - 2) | 0
+                                        a = ((a >>> 0) % 3) | 0 ? a : (d - 2) | 0
                                         i = -1
                                         if ((a | 0) == -1) {
                                           break ba
@@ -3727,16 +3727,16 @@ var DracoDecoderModule = (() => {
                                       e = b ? c : -1
                                       c = (a + ((e >>> 3) & 536870908)) | 0
                                       g = F[c >> 2]
-                                      ;(O = c), (P = oi(e) & g), (F[O >> 2] = P)
+                                      ;((O = c), (P = oi(e) & g), (F[O >> 2] = P))
                                       h = (b | 0) != -1 ? F[d >> 2] : h
                                       b = (a + ((h >>> 3) & 536870908)) | 0
                                       d = F[b >> 2]
-                                      ;(O = b), (P = oi(h) & d), (F[O >> 2] = P)
+                                      ;((O = b), (P = oi(h) & d), (F[O >> 2] = P))
                                       d = -1
                                       d = (q | 0) != -1 ? F[o >> 2] : d
                                       a = (a + ((d >>> 3) & 536870908)) | 0
                                       b = F[a >> 2]
-                                      ;(O = a), (P = oi(d) & b), (F[O >> 2] = P)
+                                      ;((O = a), (P = oi(d) & b), (F[O >> 2] = P))
                                       D[(l + 88) | 0] = 1
                                       wd(k, (l + 88) | 0)
                                       Ma(m, l)
@@ -3763,7 +3763,7 @@ var DracoDecoderModule = (() => {
                                     F[(j + 64) >> 2] = d + 1
                                     a = (F[(j + 60) >> 2] + ((d >>> 3) & 536870908)) | 0
                                     e = F[a >> 2]
-                                    ;(O = a), (P = oi(d) & e), (F[O >> 2] = P)
+                                    ;((O = a), (P = oi(d) & e), (F[O >> 2] = P))
                                     d = F[(j + 76) >> 2]
                                     if ((d | 0) != F[(j + 80) >> 2]) {
                                       F[d >> 2] = q
@@ -4202,9 +4202,9 @@ var DracoDecoderModule = (() => {
                   b = (F[b >> 2] + F[(b + 16) >> 2]) | 0
                   g = F[(($[F[(F[a >> 2] + 32) >> 2]](a) | 0) + 32) >> 2]
                   g = (F[(g + 8) >> 2] - F[(g + 16) >> 2]) | 0
-                  ;(M = c),
+                  ;((M = c),
                     (N = H[(F[(($[F[(F[a >> 2] + 32) >> 2]](a) | 0) + 32) >> 2] + 38) >> 1]),
-                    (E[(M + 38) >> 1] = N)
+                    (E[(M + 38) >> 1] = N))
                   F[c >> 2] = b
                   F[(c + 16) >> 2] = 0
                   F[(c + 20) >> 2] = 0
@@ -4413,7 +4413,7 @@ var DracoDecoderModule = (() => {
                                                                       break D
                                                                     }
                                                                     k = (b + 1) | 0
-                                                                    k = (k >>> 0) % 3 | 0 ? k : (b - 2) | 0
+                                                                    k = ((k >>> 0) % 3) | 0 ? k : (b - 2) | 0
                                                                     a = -1
                                                                     if ((k | 0) == -1) {
                                                                       break D
@@ -4423,7 +4423,7 @@ var DracoDecoderModule = (() => {
                                                                   f = F[(z + (a << 2)) >> 2]
                                                                   if ((f | 0) != -1) {
                                                                     d = (f + 1) | 0
-                                                                    d = (d >>> 0) % 3 | 0 ? d : (f - 2) | 0
+                                                                    d = ((d >>> 0) % 3) | 0 ? d : (f - 2) | 0
                                                                   }
                                                                   if ((b | 0) == (d | 0)) {
                                                                     f = -1
@@ -4458,7 +4458,7 @@ var DracoDecoderModule = (() => {
                                                                       break E
                                                                     }
                                                                     F: {
-                                                                      if ((b >>> 0) % 3 | 0) {
+                                                                      if (((b >>> 0) % 3) | 0) {
                                                                         b = (b - 1) | 0
                                                                         break F
                                                                       }
@@ -4476,7 +4476,7 @@ var DracoDecoderModule = (() => {
                                                                       break G
                                                                     }
                                                                     e = (d + 1) | 0
-                                                                    e = (e >>> 0) % 3 | 0 ? e : (d - 2) | 0
+                                                                    e = ((e >>> 0) % 3) | 0 ? e : (d - 2) | 0
                                                                     if ((e | 0) == -1) {
                                                                       break G
                                                                     }
@@ -4495,7 +4495,7 @@ var DracoDecoderModule = (() => {
                                                                   }
                                                                   b = (F[(h + 120) >> 2] + ((a >>> 3) & 536870908)) | 0
                                                                   e = F[b >> 2]
-                                                                  ;(M = b), (N = oi(a) & e), (F[M >> 2] = N)
+                                                                  ;((M = b), (N = oi(a) & e), (F[M >> 2] = N))
                                                                   F[r >> 2] = l
                                                                   b = g
                                                                   break n
@@ -4542,7 +4542,7 @@ var DracoDecoderModule = (() => {
                                                                   I: {
                                                                     J: {
                                                                       K: {
-                                                                        if ((b >>> 0) % 3 | 0) {
+                                                                        if (((b >>> 0) % 3) | 0) {
                                                                           a = (b - 1) | 0
                                                                           break K
                                                                         }
@@ -4562,7 +4562,7 @@ var DracoDecoderModule = (() => {
                                                                     F[(d + (f << 2)) >> 2] = -1
                                                                   }
                                                                   f = (b + 1) | 0
-                                                                  b = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
+                                                                  b = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
                                                                   a = -1
                                                                   if ((b | 0) == -1) {
                                                                     break H
@@ -4597,7 +4597,7 @@ var DracoDecoderModule = (() => {
                                                                   if (d >>> 0 < l >>> 0) {
                                                                     break M
                                                                   }
-                                                                  d = (e >>> 0) % (l >>> 0) | 0
+                                                                  d = ((e >>> 0) % (l >>> 0)) | 0
                                                                 }
                                                                 i = d
                                                                 d = F[(f + (i << 2)) >> 2]
@@ -4641,7 +4641,7 @@ var DracoDecoderModule = (() => {
                                                                     P: {
                                                                       if ((f | 0) != (e | 0)) {
                                                                         if (f >>> 0 >= l >>> 0) {
-                                                                          f = (f >>> 0) % (l >>> 0) | 0
+                                                                          f = ((f >>> 0) % (l >>> 0)) | 0
                                                                         }
                                                                         if ((f | 0) == (i | 0)) {
                                                                           break P
@@ -4678,8 +4678,8 @@ var DracoDecoderModule = (() => {
                                                                   a >>> 0 >= 2147483644
                                                                     ? 1073741823
                                                                     : c >>> 0 < f >>> 0
-                                                                    ? f
-                                                                    : c
+                                                                      ? f
+                                                                      : c
                                                                 if (f) {
                                                                   if (f >>> 0 >= 1073741824) {
                                                                     break j
@@ -4739,7 +4739,7 @@ var DracoDecoderModule = (() => {
                                                               if (a) {
                                                                 break w
                                                               }
-                                                              if ((b >>> 0) % 3 | 0) {
+                                                              if (((b >>> 0) % 3) | 0) {
                                                                 d = (b - 1) | 0
                                                                 break s
                                                               }
@@ -4809,8 +4809,8 @@ var DracoDecoderModule = (() => {
                                                               g >>> 0 >= 2147483644
                                                                 ? 1073741823
                                                                 : d >>> 0 < f >>> 0
-                                                                ? f
-                                                                : d
+                                                                  ? f
+                                                                  : d
                                                             if (d) {
                                                               if (d >>> 0 >= 1073741824) {
                                                                 break j
@@ -4891,7 +4891,7 @@ var DracoDecoderModule = (() => {
                                                         break S
                                                       }
                                                       e = (a + 1) | 0
-                                                      e = (e >>> 0) % 3 | 0 ? e : (a - 2) | 0
+                                                      e = ((e >>> 0) % 3) | 0 ? e : (a - 2) | 0
                                                       break S
                                                     }
                                                     e = -1
@@ -4899,7 +4899,7 @@ var DracoDecoderModule = (() => {
                                                       break S
                                                     }
                                                     e = (a - 1) | 0
-                                                    if ((a >>> 0) % 3 | 0) {
+                                                    if (((a >>> 0) % 3) | 0) {
                                                       break S
                                                     }
                                                     e = (a + 2) | 0
@@ -4937,7 +4937,7 @@ var DracoDecoderModule = (() => {
                                                           break T
                                                         }
                                                         e = (a + 1) | 0
-                                                        e = (e >>> 0) % 3 | 0 ? e : (a - 2) | 0
+                                                        e = ((e >>> 0) % 3) | 0 ? e : (a - 2) | 0
                                                         break T
                                                       }
                                                       e = -1
@@ -4945,7 +4945,7 @@ var DracoDecoderModule = (() => {
                                                         break T
                                                       }
                                                       e = (a - 1) | 0
-                                                      if ((a >>> 0) % 3 | 0) {
+                                                      if (((a >>> 0) % 3) | 0) {
                                                         break T
                                                       }
                                                       e = (a + 2) | 0
@@ -4964,7 +4964,7 @@ var DracoDecoderModule = (() => {
                                               }
                                               F[((p << 2) + a) >> 2] = d
                                               A = (b + 1) | 0
-                                              b = (A >>> 0) % 3 | 0 ? A : (b - 2) | 0
+                                              b = ((A >>> 0) % 3) | 0 ? A : (b - 2) | 0
                                               i = -1
                                               if ((b | 0) == -1) {
                                                 break q
@@ -4982,7 +4982,7 @@ var DracoDecoderModule = (() => {
                                               V: {
                                                 W: {
                                                   X: {
-                                                    if ((k >>> 0) % 3 | 0) {
+                                                    if (((k >>> 0) % 3) | 0) {
                                                       b = (k - 1) | 0
                                                       break X
                                                     }
@@ -5003,7 +5003,7 @@ var DracoDecoderModule = (() => {
                                               }
                                               i = -1
                                               b = (k + 1) | 0
-                                              b = (b >>> 0) % 3 | 0 ? b : (k - 2) | 0
+                                              b = ((b >>> 0) % 3) | 0 ? b : (k - 2) | 0
                                               e = -1
                                               if ((b | 0) == -1) {
                                                 break U
@@ -5023,7 +5023,7 @@ var DracoDecoderModule = (() => {
                                               }
                                               F[((b << 2) + a) >> 2] = d
                                               r = (b + 1) | 0
-                                              b = (r >>> 0) % 3 | 0 ? r : (b - 2) | 0
+                                              b = ((r >>> 0) % 3) | 0 ? r : (b - 2) | 0
                                               f = -1
                                               Y: {
                                                 if ((b | 0) == -1) {
@@ -5035,7 +5035,7 @@ var DracoDecoderModule = (() => {
                                                   break Y
                                                 }
                                                 f = (b + 1) | 0
-                                                f = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
+                                                f = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
                                               }
                                               b = f
                                               if ((e | 0) != (b | 0)) {
@@ -5142,7 +5142,7 @@ var DracoDecoderModule = (() => {
                                               break $
                                             }
                                             n = (i + 1) | 0
-                                            n = (n >>> 0) % 3 | 0 ? n : (i - 2) | 0
+                                            n = ((n >>> 0) % 3) | 0 ? n : (i - 2) | 0
                                             g = -1
                                             if ((n | 0) == -1) {
                                               break $
@@ -5159,7 +5159,7 @@ var DracoDecoderModule = (() => {
                                             }
                                             d = 1
                                             p = (o + 1) | 0
-                                            o = (p >>> 0) % 3 | 0 ? p : (o - 2) | 0
+                                            o = ((p >>> 0) % 3) | 0 ? p : (o - 2) | 0
                                             g = -1
                                             if ((o | 0) == -1) {
                                               break aa
@@ -5167,7 +5167,7 @@ var DracoDecoderModule = (() => {
                                             d = 0
                                             a = o
                                             g = (a + 1) | 0
-                                            g = (g >>> 0) % 3 | 0 ? g : (a - 2) | 0
+                                            g = ((g >>> 0) % 3) | 0 ? g : (a - 2) | 0
                                             if ((g | 0) != -1) {
                                               g = F[(k + (g << 2)) >> 2]
                                             } else {
@@ -5177,7 +5177,7 @@ var DracoDecoderModule = (() => {
                                           o = F[((g << 2) + x) >> 2]
                                           if ((o | 0) != -1) {
                                             b = (o + 1) | 0
-                                            b = (b >>> 0) % 3 | 0 ? b : (o - 2) | 0
+                                            b = ((b >>> 0) % 3) | 0 ? b : (o - 2) | 0
                                           }
                                           if (
                                             ((a | 0) == (i | 0)) |
@@ -5201,7 +5201,7 @@ var DracoDecoderModule = (() => {
                                               break l
                                             }
                                             f = (b + 1) | 0
-                                            f = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
+                                            f = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
                                             q = -1
                                             if ((f | 0) == -1) {
                                               break ba
@@ -5230,16 +5230,16 @@ var DracoDecoderModule = (() => {
                                           g = b ? g : -1
                                           n = (a + ((g >>> 3) & 536870908)) | 0
                                           k = F[n >> 2]
-                                          ;(M = n), (N = oi(g) & k), (F[M >> 2] = N)
+                                          ;((M = n), (N = oi(g) & k), (F[M >> 2] = N))
                                           d = (b | 0) != -1 ? F[f >> 2] : d
                                           b = (a + ((d >>> 3) & 536870908)) | 0
                                           g = F[b >> 2]
-                                          ;(M = b), (N = oi(d) & g), (F[M >> 2] = N)
+                                          ;((M = b), (N = oi(d) & g), (F[M >> 2] = N))
                                           b = -1
                                           b = (o | 0) != -1 ? F[i >> 2] : b
                                           a = (a + ((b >>> 3) & 536870908)) | 0
                                           g = F[a >> 2]
-                                          ;(M = a), (N = oi(b) & g), (F[M >> 2] = N)
+                                          ;((M = a), (N = oi(b) & g), (F[M >> 2] = N))
                                           D[(j + 88) | 0] = 1
                                           wd(e, (j + 88) | 0)
                                           Ma(l, j)
@@ -5266,7 +5266,7 @@ var DracoDecoderModule = (() => {
                                         F[(h + 64) >> 2] = b + 1
                                         a = (F[(h + 60) >> 2] + ((b >>> 3) & 536870908)) | 0
                                         d = F[a >> 2]
-                                        ;(M = a), (N = oi(b) & d), (F[M >> 2] = N)
+                                        ;((M = a), (N = oi(b) & d), (F[M >> 2] = N))
                                         b = F[(h + 76) >> 2]
                                         if ((b | 0) != F[(h + 80) >> 2]) {
                                           F[b >> 2] = i
@@ -5639,7 +5639,7 @@ var DracoDecoderModule = (() => {
                         a = 0
                         n = d
                         f = (f - 12) | 0
-                        d = (((f - ((f >>> 0) % 12 | 0)) | 0) + 12) | 0
+                        d = (((f - (((f >>> 0) % 12) | 0)) | 0) + 12) | 0
                         f = ma(n, 0, d)
                         F[(s + 4) >> 2] = d + f
                         if (G[(c + 84) | 0]) {
@@ -5960,14 +5960,14 @@ var DracoDecoderModule = (() => {
                                     a = (I + j) | 0
                                     k = -1
                                     c = (n + 1) | 0
-                                    b = (c >>> 0) % 3 | 0 ? c : (n - 2) | 0
+                                    b = ((c >>> 0) % 3) | 0 ? c : (n - 2) | 0
                                     if ((b | 0) != -1) {
                                       k = F[((b << 2) + j) >> 2]
                                     }
                                     b = F[a >> 2]
                                     t: {
                                       u: {
-                                        if (!((n >>> 0) % 3 | 0)) {
+                                        if (!(((n >>> 0) % 3) | 0)) {
                                           p = -1
                                           a = (n + 2) | 0
                                           if ((a | 0) != -1) {
@@ -6146,7 +6146,7 @@ var DracoDecoderModule = (() => {
                                       B: {
                                         f = (a + 1) | 0
                                         d = a
-                                        a = (f >>> 0) % 3 | 0 ? f : (a - 2) | 0
+                                        a = ((f >>> 0) % 3) | 0 ? f : (a - 2) | 0
                                         if ((a | 0) == -1) {
                                           break B
                                         }
@@ -6155,7 +6155,7 @@ var DracoDecoderModule = (() => {
                                           break B
                                         }
                                         f = (a + 1) | 0
-                                        a = (f >>> 0) % 3 | 0 ? f : (a - 2) | 0
+                                        a = ((f >>> 0) % 3) | 0 ? f : (a - 2) | 0
                                         if (((i | 0) == (a | 0)) | ((a | 0) == -1)) {
                                           break B
                                         }
@@ -6173,9 +6173,9 @@ var DracoDecoderModule = (() => {
                                             a = (F[(k + 16) >> 2] + ((j >>> 3) & 536870908)) | 0
                                             F[a >> 2] = F[a >> 2] | (1 << j)
                                             a = (j + 1) | 0
-                                            f = (a >>> 0) % 3 | 0 ? a : (j - 2) | 0
+                                            f = ((a >>> 0) % 3) | 0 ? a : (j - 2) | 0
                                             g = F[h >> 2]
-                                            y = (j >>> 0) % 3 | 0
+                                            y = ((j >>> 0) % 3) | 0
                                             b = ((y ? -1 : 2) + j) | 0
                                             n = F[k >> 2]
                                             A = (n | 0) == (c | 0)
@@ -6296,7 +6296,7 @@ var DracoDecoderModule = (() => {
                                               if ((a | 0) == -1) {
                                                 break I
                                               }
-                                              j = (a + ((a >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                                              j = (a + (((a >>> 0) % 3) | 0 ? -1 : 2)) | 0
                                               if ((d | 0) == (j | 0)) {
                                                 break I
                                               }
@@ -6555,7 +6555,7 @@ var DracoDecoderModule = (() => {
                                           d = F[(g + 16) >> 2]
                                           a = (d + ((c >>> 3) & 536870908)) | 0
                                           b = F[a >> 2]
-                                          ;(N = a), (O = oi(c) & b), (F[N >> 2] = O)
+                                          ;((N = a), (O = oi(c) & b), (F[N >> 2] = O))
                                           c = 1 << e
                                           b = (e >>> 5) | 0
                                           i = F[((b << 2) + d) >> 2]
@@ -6582,7 +6582,7 @@ var DracoDecoderModule = (() => {
                                                   F[((c << 2) + b) >> 2] = a
                                                 }
                                                 w = (c + 1) | 0
-                                                c = (w >>> 0) % 3 | 0 ? w : (c - 2) | 0
+                                                c = ((w >>> 0) % 3) | 0 ? w : (c - 2) | 0
                                                 d = -1
                                                 U: {
                                                   if ((c | 0) == -1) {
@@ -6594,7 +6594,7 @@ var DracoDecoderModule = (() => {
                                                     break U
                                                   }
                                                   d = (c + 1) | 0
-                                                  d = (d >>> 0) % 3 | 0 ? d : (c - 2) | 0
+                                                  d = ((d >>> 0) % 3) | 0 ? d : (c - 2) | 0
                                                 }
                                                 c = d
                                                 if ((f | 0) != (c | 0)) {
@@ -6608,7 +6608,7 @@ var DracoDecoderModule = (() => {
                                               c = 1
                                               break S
                                             }
-                                            if ((f >>> 0) % 3 | 0) {
+                                            if (((f >>> 0) % 3) | 0) {
                                               c = (f - 1) | 0
                                               break S
                                             }
@@ -6622,7 +6622,7 @@ var DracoDecoderModule = (() => {
                                             break R
                                           }
                                           V: {
-                                            if ((c >>> 0) % 3 | 0) {
+                                            if (((c >>> 0) % 3) | 0) {
                                               c = (c - 1) | 0
                                               break V
                                             }
@@ -6640,7 +6640,7 @@ var DracoDecoderModule = (() => {
                                               F[((c << 2) + b) >> 2] = a
                                             }
                                             W: {
-                                              if ((c >>> 0) % 3 | 0) {
+                                              if (((c >>> 0) % 3) | 0) {
                                                 c = (c - 1) | 0
                                                 break W
                                               }
@@ -6653,7 +6653,7 @@ var DracoDecoderModule = (() => {
                                             if ((c | 0) == -1) {
                                               break R
                                             }
-                                            c = (c + ((c >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                                            c = (c + (((c >>> 0) % 3) | 0 ? -1 : 2)) | 0
                                             if ((c | 0) != -1) {
                                               continue
                                             }
@@ -6829,7 +6829,10 @@ var DracoDecoderModule = (() => {
                                       ca: {
                                         if ((a | 0) >= 0) {
                                           F[(e + 12) >> 2] =
-                                            F[(((F[(F[l >> 2] + 96) >> 2] + L(f, 12)) | 0) + ((a >>> 0) % 3 << 2)) >> 2]
+                                            F[
+                                              (((F[(F[l >> 2] + 96) >> 2] + L(f, 12)) | 0) + (((a >>> 0) % 3) << 2)) >>
+                                                2
+                                            ]
                                           F[(e + 8) >> 2] = m
                                           Qa((e + 8) | 0, (e + 12) | 0)
                                           break ca
@@ -6843,7 +6846,7 @@ var DracoDecoderModule = (() => {
                                       }
                                       c = -1
                                       f = (a + 1) | 0
-                                      f = (f >>> 0) % 3 | 0 ? f : (a - 2) | 0
+                                      f = ((f >>> 0) % 3) | 0 ? f : (a - 2) | 0
                                       if ((f | 0) >= 0) {
                                         g = ((f >>> 0) / 3) | 0
                                         f = F[(((F[(F[l >> 2] + 96) >> 2] + L(g, 12)) | 0) + ((f - L(g, 3)) << 2)) >> 2]
@@ -6853,7 +6856,7 @@ var DracoDecoderModule = (() => {
                                       F[(e + 12) >> 2] = f
                                       F[(e + 8) >> 2] = m
                                       Qa((e + 8) | 0, (e + 12) | 0)
-                                      f = (((a >>> 0) % 3 | 0 ? -1 : 2) + a) | 0
+                                      f = ((((a >>> 0) % 3) | 0 ? -1 : 2) + a) | 0
                                       if ((f | 0) < 0) {
                                         break aa
                                       }
@@ -6864,7 +6867,7 @@ var DracoDecoderModule = (() => {
                                     c =
                                       (a | 0) < 0
                                         ? -1
-                                        : F[(((F[(F[l >> 2] + 96) >> 2] + L(f, 12)) | 0) + ((a >>> 0) % 3 << 2)) >> 2]
+                                        : F[(((F[(F[l >> 2] + 96) >> 2] + L(f, 12)) | 0) + (((a >>> 0) % 3) << 2)) >> 2]
                                     F[(l + 76) >> 2] = c
                                     F[(e + 12) >> 2] = c
                                     F[(e + 8) >> 2] = m
@@ -6886,7 +6889,7 @@ var DracoDecoderModule = (() => {
                                       break Z
                                     }
                                     c = (a + 1) | 0
-                                    a = (c >>> 0) % 3 | 0 ? c : (a - 2) | 0
+                                    a = ((c >>> 0) % 3) | 0 ? c : (a - 2) | 0
                                     break $
                                   }
                                   c = -1
@@ -8972,7 +8975,7 @@ var DracoDecoderModule = (() => {
                                       a = F[(d + 8) >> 2]
                                       j: {
                                         if ((b | 0) == (a | 0)) {
-                                          ;(m = 11764), (n = oi(c) & g), (F[m >> 2] = n)
+                                          ;((m = 11764), (n = oi(c) & g), (F[m >> 2] = n))
                                           break j
                                         }
                                         F[(a + 12) >> 2] = b
@@ -9515,7 +9518,7 @@ var DracoDecoderModule = (() => {
                                         b = (f >>> 3) | 0
                                         c = F[(g + 12) >> 2]
                                         if ((c | 0) == (d | 0)) {
-                                          ;(m = 11764), (n = F[2941] & oi(b)), (F[m >> 2] = n)
+                                          ;((m = 11764), (n = F[2941] & oi(b)), (F[m >> 2] = n))
                                           break F
                                         }
                                         F[(d + 12) >> 2] = c
@@ -9573,7 +9576,7 @@ var DracoDecoderModule = (() => {
                                           if (c) {
                                             break I
                                           }
-                                          ;(m = 11768), (n = F[2942] & oi(d)), (F[m >> 2] = n)
+                                          ;((m = 11768), (n = F[2942] & oi(d)), (F[m >> 2] = n))
                                           break F
                                         }
                                         F[(h + (F[(h + 16) >> 2] == (g | 0) ? 16 : 20)) >> 2] = c
@@ -9917,7 +9920,7 @@ var DracoDecoderModule = (() => {
                         if (d) {
                           break U
                         }
-                        ;(m = 11768), (n = oi(b) & j), (F[m >> 2] = n)
+                        ;((m = 11768), (n = oi(b) & j), (F[m >> 2] = n))
                         break T
                       }
                       F[(i + (F[(i + 16) >> 2] == (c | 0) ? 16 : 20)) >> 2] = d
@@ -12537,7 +12540,7 @@ var DracoDecoderModule = (() => {
                                 b = ka(c)
                                 F[h >> 2] = b
                                 F[(h + 8) >> 2] = (c & -4) + b
-                                ;(u = h), (w = (ma(b, 0, c) + c) | 0), (F[(u + 4) >> 2] = w)
+                                ;((u = h), (w = (ma(b, 0, c) + c) | 0), (F[(u + 4) >> 2] = w))
                               }
                               c = F[(l + 24) >> 2]
                               if (((F[(l + 28) >> 2] - c) | 0) < 4) {
@@ -12560,7 +12563,7 @@ var DracoDecoderModule = (() => {
                                       break n
                                     }
                                     e = (g + 2) | 0
-                                    i = (g >>> 0) % 3 | 0
+                                    i = ((g >>> 0) % 3) | 0
                                     q = i ? (g - 1) | 0 : e
                                     c = (((c - n) | 0) / 144) | 0
                                     r = c >>> 0 <= 1 ? 1 : c
@@ -12585,7 +12588,7 @@ var DracoDecoderModule = (() => {
                                             break p
                                           }
                                           c = (e - 1) | 0
-                                          if ((e >>> 0) % 3 | 0) {
+                                          if (((e >>> 0) % 3) | 0) {
                                             break p
                                           }
                                           c = (e + 2) | 0
@@ -12607,7 +12610,7 @@ var DracoDecoderModule = (() => {
                                           }
                                           q: {
                                             r: {
-                                              if ((c >>> 0) % 3 | 0) {
+                                              if (((c >>> 0) % 3) | 0) {
                                                 e = (c - 1) | 0
                                                 break r
                                               }
@@ -12623,7 +12626,7 @@ var DracoDecoderModule = (() => {
                                               break q
                                             }
                                             m = (c - 1) | 0
-                                            if ((c >>> 0) % 3 | 0) {
+                                            if (((c >>> 0) % 3) | 0) {
                                               break q
                                             }
                                             m = (c + 2) | 0
@@ -12686,7 +12689,7 @@ var DracoDecoderModule = (() => {
                                     break m
                                   }
                                   t: {
-                                    if ((g >>> 0) % 3 | 0) {
+                                    if (((g >>> 0) % 3) | 0) {
                                       c = (g - 1) | 0
                                       break t
                                     }
@@ -12699,7 +12702,7 @@ var DracoDecoderModule = (() => {
                                   if ((c | 0) == -1) {
                                     break m
                                   }
-                                  c = (c + ((c >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                                  c = (c + (((c >>> 0) % 3) | 0 ? -1 : 2)) | 0
                                   if ((c | 0) == -1) {
                                     break m
                                   }
@@ -12780,7 +12783,7 @@ var DracoDecoderModule = (() => {
                                       break m
                                     }
                                     w: {
-                                      if ((i >>> 0) % 3 | 0) {
+                                      if (((i >>> 0) % 3) | 0) {
                                         c = (i - 1) | 0
                                         break w
                                       }
@@ -12793,7 +12796,7 @@ var DracoDecoderModule = (() => {
                                     if ((c | 0) == -1) {
                                       break m
                                     }
-                                    c = (c + ((c >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                                    c = (c + (((c >>> 0) % 3) | 0 ? -1 : 2)) | 0
                                     if ((c | 0) == -1) {
                                       break m
                                     }
@@ -13135,7 +13138,7 @@ var DracoDecoderModule = (() => {
                                     }
                                     k = 1
                                     d = (f + 2) | 0
-                                    j = (f >>> 0) % 3 | 0
+                                    j = ((f >>> 0) % 3) | 0
                                     x = j ? (f - 1) | 0 : d
                                     s = 1 << x
                                     n = F[t >> 2]
@@ -13162,14 +13165,18 @@ var DracoDecoderModule = (() => {
                                           q = (j + 1) | 0
                                           q =
                                             F[
-                                              (l + (F[(h + (((q >>> 0) % 3 | 0 ? q : (j - 2) | 0) << 2)) >> 2] << 2)) >>
+                                              (l +
+                                                (F[(h + ((((q >>> 0) % 3) | 0 ? q : (j - 2) | 0) << 2)) >> 2] << 2)) >>
                                                 2
                                             ]
                                           if ((q | 0) >= (m | 0)) {
                                             break r
                                           }
                                           h =
-                                            F[(l + (F[(h + ((j + ((j >>> 0) % 3 | 0 ? -1 : 2)) << 2)) >> 2] << 2)) >> 2]
+                                            F[
+                                              (l + (F[(h + ((j + (((j >>> 0) % 3) | 0 ? -1 : 2)) << 2)) >> 2] << 2)) >>
+                                                2
+                                            ]
                                           if ((h | 0) >= (m | 0)) {
                                             break r
                                           }
@@ -13218,7 +13225,7 @@ var DracoDecoderModule = (() => {
                                             h = (d - 2) | 0
                                             j = (d + 1) | 0
                                             d = -1
-                                            j = (j >>> 0) % 3 | 0 ? j : h
+                                            j = ((j >>> 0) % 3) | 0 ? j : h
                                             if (((j | 0) == -1) | ((F[(n + ((j >>> 3) & 536870908)) >> 2] >>> j) & 1)) {
                                               break t
                                             }
@@ -13227,11 +13234,11 @@ var DracoDecoderModule = (() => {
                                               break t
                                             }
                                             d = (j + 1) | 0
-                                            d = (d >>> 0) % 3 | 0 ? d : (j - 2) | 0
+                                            d = ((d >>> 0) % 3) | 0 ? d : (j - 2) | 0
                                             break t
                                           }
                                           u: {
-                                            if ((d >>> 0) % 3 | 0) {
+                                            if (((d >>> 0) % 3) | 0) {
                                               h = (d - 1) | 0
                                               break u
                                             }
@@ -13249,7 +13256,7 @@ var DracoDecoderModule = (() => {
                                           if ((j | 0) == -1) {
                                             break t
                                           }
-                                          if ((j >>> 0) % 3 | 0) {
+                                          if (((j >>> 0) % 3) | 0) {
                                             d = (j - 1) | 0
                                             break t
                                           }
@@ -13268,7 +13275,7 @@ var DracoDecoderModule = (() => {
                                               break v
                                             }
                                             k = 0
-                                            d = (d >>> 0) % 3 | 0 ? (d - 1) | 0 : (d + 2) | 0
+                                            d = ((d >>> 0) % 3) | 0 ? (d - 1) | 0 : (d + 2) | 0
                                           }
                                           if ((d | 0) != -1) {
                                             continue
@@ -13791,7 +13798,7 @@ var DracoDecoderModule = (() => {
                                     }
                                     n = F[(A + 12) >> 2]
                                     d = (f + 2) | 0
-                                    g = (f >>> 0) % 3 | 0
+                                    g = ((f >>> 0) % 3) | 0
                                     q = (n + ((g ? (f - 1) | 0 : d) << 2)) | 0
                                     j = 0
                                     u = ((g | 0) != 0) | ((d | 0) != -1)
@@ -13809,14 +13816,14 @@ var DracoDecoderModule = (() => {
                                           r = F[A >> 2]
                                           i = (p + (F[(r + (g << 2)) >> 2] << 2)) | 0
                                           o = (g + 1) | 0
-                                          o = (o >>> 0) % 3 | 0 ? o : (g - 2) | 0
+                                          o = ((o >>> 0) % 3) | 0 ? o : (g - 2) | 0
                                           if ((o | 0) != -1) {
                                             l = F[(r + (o << 2)) >> 2]
                                           }
                                           o = F[i >> 2]
                                           s: {
                                             t: {
-                                              if ((g >>> 0) % 3 | 0) {
+                                              if (((g >>> 0) % 3) | 0) {
                                                 i = (g - 1) | 0
                                                 break t
                                               }
@@ -13882,7 +13889,7 @@ var DracoDecoderModule = (() => {
                                         v: {
                                           if (k & 1) {
                                             i = (d + 1) | 0
-                                            d = (i >>> 0) % 3 | 0 ? i : (d - 2) | 0
+                                            d = ((i >>> 0) % 3) | 0 ? i : (d - 2) | 0
                                             g = -1
                                             if ((d | 0) == -1) {
                                               break v
@@ -13893,11 +13900,11 @@ var DracoDecoderModule = (() => {
                                               break v
                                             }
                                             g = (d + 1) | 0
-                                            g = (g >>> 0) % 3 | 0 ? g : (d - 2) | 0
+                                            g = ((g >>> 0) % 3) | 0 ? g : (d - 2) | 0
                                             break v
                                           }
                                           w: {
-                                            if ((d >>> 0) % 3 | 0) {
+                                            if (((d >>> 0) % 3) | 0) {
                                               i = (d - 1) | 0
                                               break w
                                             }
@@ -13913,7 +13920,7 @@ var DracoDecoderModule = (() => {
                                             break v
                                           }
                                           g = (d - 1) | 0
-                                          if ((d >>> 0) % 3 | 0) {
+                                          if (((d >>> 0) % 3) | 0) {
                                             break v
                                           }
                                           g = (d + 2) | 0
@@ -13932,7 +13939,7 @@ var DracoDecoderModule = (() => {
                                               break x
                                             }
                                             k = 0
-                                            d = (d >>> 0) % 3 | 0 ? (d - 1) | 0 : (d + 2) | 0
+                                            d = ((d >>> 0) % 3) | 0 ? (d - 1) | 0 : (d + 2) | 0
                                           }
                                           if ((d | 0) != -1) {
                                             continue
@@ -14313,12 +14320,12 @@ var DracoDecoderModule = (() => {
                           }
                           i = F[(o + 32) >> 2]
                           g = (e + 1) | 0
-                          g = (g >>> 0) % 3 | 0 ? g : (e - 2) | 0
+                          g = ((g >>> 0) % 3) | 0 ? g : (e - 2) | 0
                           if ((g | 0) != -1) {
                             f = F[(F[i >> 2] + (g << 2)) >> 2]
                           }
                           p = -1
-                          e = (e + ((e >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                          e = (e + (((e >>> 0) % 3) | 0 ? -1 : 2)) | 0
                           if ((e | 0) != -1) {
                             p = F[(F[i >> 2] + (e << 2)) >> 2]
                           }
@@ -14623,7 +14630,7 @@ var DracoDecoderModule = (() => {
                             n = f
                             f = _
                             i = (n + (g ? (0 - ((f + ((i | 0) != 0)) | 0)) | 0 : f)) | 0
-                            ;($ = o), (aa = li(m, h >>> 0 > m >>> 0 ? (i + 1) | 0 : i, r, s)), (F[($ + 12) >> 2] = aa)
+                            ;(($ = o), (aa = li(m, h >>> 0 > m >>> 0 ? (i + 1) | 0 : i, r, s)), (F[($ + 12) >> 2] = aa))
                             f = ki(j, q, E, W)
                             i = _
                             j = ki(r, s, Q, R)
@@ -14637,7 +14644,7 @@ var DracoDecoderModule = (() => {
                               0
                             i = g ? e : i
                             f = (i + f) | 0
-                            ;($ = o), (aa = li(f, f >>> 0 < i >>> 0 ? (h + 1) | 0 : h, r, s)), (F[($ + 8) >> 2] = aa)
+                            ;(($ = o), (aa = li(f, f >>> 0 < i >>> 0 ? (h + 1) | 0 : h, r, s)), (F[($ + 8) >> 2] = aa))
                           }
                           Z = (k + 80) | 0
                           e = p
@@ -14819,9 +14826,9 @@ var DracoDecoderModule = (() => {
                           break d
                         }
                         e = (h + 1) | 0
-                        f = (e >>> 0) % 3 | 0 ? e : (h - 2) | 0
+                        f = ((e >>> 0) % 3) | 0 ? e : (h - 2) | 0
                         e = (h - 1) | 0
-                        if ((h >>> 0) % 3 | 0) {
+                        if (((h >>> 0) % 3) | 0) {
                           break d
                         }
                         e = (h + 2) | 0
@@ -15138,7 +15145,7 @@ var DracoDecoderModule = (() => {
                         n = f
                         f = _
                         h = (n + (g ? (0 - ((f + ((h | 0) != 0)) | 0)) | 0 : f)) | 0
-                        ;($ = o), (aa = li(m, i >>> 0 > m >>> 0 ? (h + 1) | 0 : h, r, s)), (F[($ + 12) >> 2] = aa)
+                        ;(($ = o), (aa = li(m, i >>> 0 > m >>> 0 ? (h + 1) | 0 : h, r, s)), (F[($ + 12) >> 2] = aa))
                         f = ki(l, q, E, W)
                         h = _
                         l = ki(r, s, Q, R)
@@ -15150,7 +15157,7 @@ var DracoDecoderModule = (() => {
                         i = ((f >>> 0 < l >>> 0 ? (i + 1) | 0 : i) + (g ? j : (0 - ((((e | 0) != 0) + j) | 0)) | 0)) | 0
                         h = g ? e : h
                         f = (h + f) | 0
-                        ;($ = o), (aa = li(f, f >>> 0 < h >>> 0 ? (i + 1) | 0 : i, r, s)), (F[($ + 8) >> 2] = aa)
+                        ;(($ = o), (aa = li(f, f >>> 0 < h >>> 0 ? (i + 1) | 0 : i, r, s)), (F[($ + 8) >> 2] = aa))
                       }
                       Z = (k + 80) | 0
                       if (!p) {
@@ -18872,12 +18879,12 @@ var DracoDecoderModule = (() => {
                             }
                             d = F[(a + 4) >> 2]
                             e = (b + 1) | 0
-                            e = (e >>> 0) % 3 | 0 ? e : (b - 2) | 0
+                            e = ((e >>> 0) % 3) | 0 ? e : (b - 2) | 0
                             if ((e | 0) != -1) {
                               c = F[(F[d >> 2] + (e << 2)) >> 2]
                             }
                             h: {
-                              if ((b >>> 0) % 3 | 0) {
+                              if (((b >>> 0) % 3) | 0) {
                                 l = (b - 1) | 0
                                 break h
                               }
@@ -18899,7 +18906,7 @@ var DracoDecoderModule = (() => {
                             f = (a + 8) | 0
                             if ((b | 0) != -1) {
                               d = (b + 1) | 0
-                              d = (d >>> 0) % 3 | 0 ? d : (b - 2) | 0
+                              d = ((d >>> 0) % 3) | 0 ? d : (b - 2) | 0
                             } else {
                               d = -1
                             }
@@ -18918,7 +18925,7 @@ var DracoDecoderModule = (() => {
                                 break i
                               }
                               c = (b - 1) | 0
-                              if ((b >>> 0) % 3 | 0) {
+                              if (((b >>> 0) % 3) | 0) {
                                 break i
                               }
                               c = (b + 2) | 0
@@ -18984,7 +18991,7 @@ var DracoDecoderModule = (() => {
                                                     i =
                                                       F[
                                                         (((F[(F[(a + 16) >> 2] + 96) >> 2] + L(k, 12)) | 0) +
-                                                          ((c >>> 0) % 3 << 2)) >>
+                                                          (((c >>> 0) % 3) << 2)) >>
                                                           2
                                                       ]
                                                     l = F[(F[(a + 20) >> 2] + 4) >> 2]
@@ -19091,7 +19098,7 @@ var DracoDecoderModule = (() => {
                                                   g = F[(a + 4) >> 2]
                                                   f = -1
                                                   b = (c + 1) | 0
-                                                  b = (b >>> 0) % 3 | 0 ? b : (c - 2) | 0
+                                                  b = ((b >>> 0) % 3) | 0 ? b : (c - 2) | 0
                                                   if ((b | 0) != -1) {
                                                     f = F[(F[(g + 12) >> 2] + (b << 2)) >> 2]
                                                   }
@@ -21390,8 +21397,8 @@ var DracoDecoderModule = (() => {
                       Ga(f, d, D[(f + 24) | 0], (e + 56) | 0)
                       if ((b | 0) != -1) {
                         f = (b + 1) | 0
-                        j = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
-                        m = (((b >>> 0) % 3 | 0 ? -1 : 2) + b) | 0
+                        j = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
+                        m = ((((b >>> 0) % 3) | 0 ? -1 : 2) + b) | 0
                         while (1) {
                           d = j
                           f = m
@@ -21400,9 +21407,9 @@ var DracoDecoderModule = (() => {
                               break c
                             }
                             f = (b + 1) | 0
-                            d = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
+                            d = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
                             f = (b - 1) | 0
-                            if ((b >>> 0) % 3 | 0) {
+                            if (((b >>> 0) % 3) | 0) {
                               break c
                             }
                             f = (b + 2) | 0
@@ -21504,7 +21511,7 @@ var DracoDecoderModule = (() => {
                                         break h
                                       }
                                       d = (b + 1) | 0
-                                      b = (d >>> 0) % 3 | 0 ? d : (b - 2) | 0
+                                      b = ((d >>> 0) % 3) | 0 ? d : (b - 2) | 0
                                       if (
                                         ((b | 0) == -1) |
                                         ((F[(F[f >> 2] + ((b >>> 3) & 536870908)) >> 2] >>> b) & 1)
@@ -21520,7 +21527,7 @@ var DracoDecoderModule = (() => {
                                     break f
                                   }
                                   d = (b + 1) | 0
-                                  b = (d >>> 0) % 3 | 0 ? d : (b - 2) | 0
+                                  b = ((d >>> 0) % 3) | 0 ? d : (b - 2) | 0
                                   F[(e + 88) >> 2] = b
                                   if ((b | 0) != -1) {
                                     break e
@@ -21533,7 +21540,7 @@ var DracoDecoderModule = (() => {
                                     break i
                                   }
                                   j: {
-                                    if ((b >>> 0) % 3 | 0) {
+                                    if (((b >>> 0) % 3) | 0) {
                                       b = (b - 1) | 0
                                       break j
                                     }
@@ -21553,7 +21560,7 @@ var DracoDecoderModule = (() => {
                                     break i
                                   }
                                   d = (b - 1) | 0
-                                  if ((b >>> 0) % 3 | 0) {
+                                  if (((b >>> 0) % 3) | 0) {
                                     break i
                                   }
                                   d = (b + 2) | 0
@@ -21574,7 +21581,7 @@ var DracoDecoderModule = (() => {
                                 break k
                               }
                               l: {
-                                if ((b >>> 0) % 3 | 0) {
+                                if (((b >>> 0) % 3) | 0) {
                                   b = (b - 1) | 0
                                   break l
                                 }
@@ -21594,7 +21601,7 @@ var DracoDecoderModule = (() => {
                                 break k
                               }
                               d = (b - 1) | 0
-                              if ((b >>> 0) % 3 | 0) {
+                              if (((b >>> 0) % 3) | 0) {
                                 break k
                               }
                               d = (b + 2) | 0
@@ -23512,7 +23519,7 @@ var DracoDecoderModule = (() => {
                                 break g
                               }
                               e = (i + 1) | 0
-                              e = (e >>> 0) % 3 | 0 ? e : (i - 2) | 0
+                              e = ((e >>> 0) % 3) | 0 ? e : (i - 2) | 0
                               if (((e | 0) == -1) | ((F[(F[a >> 2] + ((e >>> 3) & 536870908)) >> 2] >>> e) & 1)) {
                                 break g
                               }
@@ -23521,7 +23528,7 @@ var DracoDecoderModule = (() => {
                                 break g
                               }
                               b = (e + 1) | 0
-                              b = (b >>> 0) % 3 | 0 ? b : (e - 2) | 0
+                              b = ((b >>> 0) % 3) | 0 ? b : (e - 2) | 0
                               if ((b | 0) == -1) {
                                 break g
                               }
@@ -23531,7 +23538,7 @@ var DracoDecoderModule = (() => {
                                 e = b
                                 b = -1
                                 d = (e + 1) | 0
-                                d = (d >>> 0) % 3 | 0 ? d : (e - 2) | 0
+                                d = ((d >>> 0) % 3) | 0 ? d : (e - 2) | 0
                                 h: {
                                   if (((d | 0) == -1) | ((F[(f + ((d >>> 3) & 536870908)) >> 2] >>> d) & 1)) {
                                     break h
@@ -23541,7 +23548,7 @@ var DracoDecoderModule = (() => {
                                     break h
                                   }
                                   b = (d + 1) | 0
-                                  b = (b >>> 0) % 3 | 0 ? b : (d - 2) | 0
+                                  b = ((b >>> 0) % 3) | 0 ? b : (d - 2) | 0
                                 }
                                 if ((b | 0) != (i | 0)) {
                                   if ((b | 0) == -1) {
@@ -23608,7 +23615,7 @@ var DracoDecoderModule = (() => {
                             break d
                           }
                           j: {
-                            if ((e >>> 0) % 3 | 0) {
+                            if (((e >>> 0) % 3) | 0) {
                               c = (e - 1) | 0
                               break j
                             }
@@ -23621,13 +23628,13 @@ var DracoDecoderModule = (() => {
                           if ((d | 0) == -1) {
                             break d
                           }
-                          f = (d + ((d >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                          f = (d + (((d >>> 0) % 3) | 0 ? -1 : 2)) | 0
                           if (((f | 0) == -1) | ((e | 0) == (f | 0))) {
                             break d
                           }
                           while (1) {
                             b = (f + 1) | 0
-                            b = (b >>> 0) % 3 | 0 ? b : (f - 2) | 0
+                            b = ((b >>> 0) % 3) | 0 ? b : (f - 2) | 0
                             if ((F[(F[a >> 2] + ((b >>> 3) & 536870908)) >> 2] >>> b) & 1) {
                               b = F[(a + 56) >> 2]
                               k: {
@@ -23728,7 +23735,7 @@ var DracoDecoderModule = (() => {
                             F[(F[(a + 28) >> 2] + (f << 2)) >> 2] = g
                             b = F[(a + 64) >> 2]
                             m: {
-                              if ((f >>> 0) % 3 | 0) {
+                              if (((f >>> 0) % 3) | 0) {
                                 c = (f - 1) | 0
                                 break m
                               }
@@ -23741,7 +23748,7 @@ var DracoDecoderModule = (() => {
                             if ((d | 0) == -1) {
                               break d
                             }
-                            f = (d + ((d >>> 0) % 3 | 0 ? -1 : 2)) | 0
+                            f = (d + (((d >>> 0) % 3) | 0 ? -1 : 2)) | 0
                             if ((f | 0) == -1) {
                               break d
                             }
@@ -23825,8 +23832,8 @@ var DracoDecoderModule = (() => {
                   F[(f + 60) >> 2] = 0
                   Ga(d, e, D[(d + 24) | 0], (f + 56) | 0)
                   e = (b + 1) | 0
-                  j = (e >>> 0) % 3 | 0 ? e : (b - 2) | 0
-                  n = (((b >>> 0) % 3 | 0 ? -1 : 2) + b) | 0
+                  j = ((e >>> 0) % 3) | 0 ? e : (b - 2) | 0
+                  n = ((((b >>> 0) % 3) | 0 ? -1 : 2) + b) | 0
                   b: {
                     c: {
                       while (1) {
@@ -23837,9 +23844,9 @@ var DracoDecoderModule = (() => {
                             break d
                           }
                           e = (b + 1) | 0
-                          d = (e >>> 0) % 3 | 0 ? e : (b - 2) | 0
+                          d = ((e >>> 0) % 3) | 0 ? e : (b - 2) | 0
                           e = (b - 1) | 0
-                          if ((b >>> 0) % 3 | 0) {
+                          if (((b >>> 0) % 3) | 0) {
                             break d
                           }
                           e = (b + 2) | 0
@@ -24442,7 +24449,7 @@ var DracoDecoderModule = (() => {
                         b = (b >>> 3) | 0
                         c = F[(d + 12) >> 2]
                         if ((c | 0) == (e | 0)) {
-                          ;(i = 11764), (j = F[2941] & oi(b)), (F[i >> 2] = j)
+                          ;((i = 11764), (j = F[2941] & oi(b)), (F[i >> 2] = j))
                           break b
                         }
                         F[(e + 12) >> 2] = c
@@ -24500,7 +24507,7 @@ var DracoDecoderModule = (() => {
                           if (b) {
                             break e
                           }
-                          ;(i = 11768), (j = F[2942] & oi(e)), (F[i >> 2] = j)
+                          ;((i = 11768), (j = F[2942] & oi(e)), (F[i >> 2] = j))
                           break b
                         }
                         F[(h + (F[(h + 16) >> 2] == (d | 0) ? 16 : 20)) >> 2] = b
@@ -24568,7 +24575,7 @@ var DracoDecoderModule = (() => {
                           b = (b >>> 3) | 0
                           c = F[(f + 12) >> 2]
                           if ((c | 0) == (e | 0)) {
-                            ;(i = 11764), (j = F[2941] & oi(b)), (F[i >> 2] = j)
+                            ;((i = 11764), (j = F[2941] & oi(b)), (F[i >> 2] = j))
                             break g
                           }
                           F[(e + 12) >> 2] = c
@@ -24626,7 +24633,7 @@ var DracoDecoderModule = (() => {
                             if (b) {
                               break j
                             }
-                            ;(i = 11768), (j = F[2942] & oi(e)), (F[i >> 2] = j)
+                            ;((i = 11768), (j = F[2942] & oi(e)), (F[i >> 2] = j))
                             break g
                           }
                           F[(h + (F[(h + 16) >> 2] == (f | 0) ? 16 : 20)) >> 2] = b
@@ -24859,7 +24866,7 @@ var DracoDecoderModule = (() => {
                           g = F[p >> 2]
                           k = F[(j + (F[(g + (f << 2)) >> 2] << 2)) >> 2]
                           i = (f + 1) | 0
-                          i = (i >>> 0) % 3 | 0 ? i : (f - 2) | 0
+                          i = ((i >>> 0) % 3) | 0 ? i : (f - 2) | 0
                           if ((i | 0) != -1) {
                             i = F[(g + (i << 2)) >> 2]
                           } else {
@@ -24867,7 +24874,7 @@ var DracoDecoderModule = (() => {
                           }
                           g: {
                             h: {
-                              if ((f >>> 0) % 3 | 0) {
+                              if (((f >>> 0) % 3) | 0) {
                                 f = (f - 1) | 0
                                 break h
                               }
@@ -25093,7 +25100,7 @@ var DracoDecoderModule = (() => {
                     ja(e)
                   }
                   c = (b + 1) | 0
-                  i = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                  i = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                   c = F[(F[(a + 4) >> 2] + 28) >> 2]
                   k = F[((i << 2) + c) >> 2]
                   if ((k | 0) == -1) {
@@ -25163,7 +25170,7 @@ var DracoDecoderModule = (() => {
                                     break g
                                   }
                                   b = (g + 1) | 0
-                                  b = (b >>> 0) % 3 | 0 ? b : (g - 2) | 0
+                                  b = ((b >>> 0) % 3) | 0 ? b : (g - 2) | 0
                                   if (((b | 0) == -1) | ((F[(F[h >> 2] + ((b >>> 3) & 536870908)) >> 2] >>> b) & 1)) {
                                     break g
                                   }
@@ -25181,7 +25188,7 @@ var DracoDecoderModule = (() => {
                               Ka(k, c, d)
                               h = F[(a + 4) >> 2]
                               b = (g + 1) | 0
-                              if ((((b >>> 0) % 3 | 0 ? b : (g - 2) | 0) | 0) == -1) {
+                              if (((((b >>> 0) % 3) | 0 ? b : (g - 2) | 0) | 0) == -1) {
                                 break e
                               }
                               b = -1
@@ -25190,7 +25197,7 @@ var DracoDecoderModule = (() => {
                                   break h
                                 }
                                 c = (d + 1) | 0
-                                c = (c >>> 0) % 3 | 0 ? c : (d - 2) | 0
+                                c = ((c >>> 0) % 3) | 0 ? c : (d - 2) | 0
                                 if (((c | 0) == -1) | ((F[(F[h >> 2] + ((c >>> 3) & 536870908)) >> 2] >>> c) & 1)) {
                                   break h
                                 }
@@ -25210,13 +25217,13 @@ var DracoDecoderModule = (() => {
                                 }
                                 c = -1
                                 b = (d + 1) | 0
-                                b = (b >>> 0) % 3 | 0 ? b : (d - 2) | 0
+                                b = ((b >>> 0) % 3) | 0 ? b : (d - 2) | 0
                                 if (!(((b | 0) == -1) | ((F[(F[h >> 2] + ((b >>> 3) & 536870908)) >> 2] >>> b) & 1))) {
                                   c = F[(F[(F[(h + 64) >> 2] + 12) >> 2] + (b << 2)) >> 2]
                                 }
                                 k: {
                                   l: {
-                                    if ((d >>> 0) % 3 | 0) {
+                                    if (((d >>> 0) % 3) | 0) {
                                       f = (d - 1) | 0
                                       break l
                                     }
@@ -25470,11 +25477,11 @@ var DracoDecoderModule = (() => {
                             break f
                           }
                           j = (f + 1) | 0
-                          j = F[(i + (F[(g + (((j >>> 0) % 3 | 0 ? j : (f - 2) | 0) << 2)) >> 2] << 2)) >> 2]
+                          j = F[(i + (F[(g + ((((j >>> 0) % 3) | 0 ? j : (f - 2) | 0) << 2)) >> 2] << 2)) >> 2]
                           if ((j | 0) >= (h | 0)) {
                             break f
                           }
-                          f = F[(i + (F[(g + ((f + ((f >>> 0) % 3 | 0 ? -1 : 2)) << 2)) >> 2] << 2)) >> 2]
+                          f = F[(i + (F[(g + ((f + (((f >>> 0) % 3) | 0 ? -1 : 2)) << 2)) >> 2] << 2)) >> 2]
                           if ((f | 0) >= (h | 0)) {
                             break f
                           }
@@ -25668,7 +25675,7 @@ var DracoDecoderModule = (() => {
                       if (g >>> 0 >= 2) {
                         e = i
                         if (f >>> 0 <= e >>> 0) {
-                          e = (i >>> 0) % (f >>> 0) | 0
+                          e = ((i >>> 0) % (f >>> 0)) | 0
                         }
                         c = F[(F[b >> 2] + (e << 2)) >> 2]
                         if (!c) {
@@ -25685,7 +25692,7 @@ var DracoDecoderModule = (() => {
                           g = F[(c + 4) >> 2]
                           if ((g | 0) != (i | 0)) {
                             if (f >>> 0 <= g >>> 0) {
-                              g = (g >>> 0) % (f >>> 0) | 0
+                              g = ((g >>> 0) % (f >>> 0)) | 0
                             }
                             if ((e | 0) != (g | 0)) {
                               break b
@@ -25846,7 +25853,7 @@ var DracoDecoderModule = (() => {
                                 if (g >>> 0 < 2) {
                                   break m
                                 }
-                                f = f >>> 0 >= h >>> 0 ? (f >>> 0) % (h >>> 0) | 0 : f
+                                f = f >>> 0 >= h >>> 0 ? ((f >>> 0) % (h >>> 0)) | 0 : f
                                 F[(F[b >> 2] + (f << 2)) >> 2] = d
                                 d = F[e >> 2]
                                 if (!d) {
@@ -25858,7 +25865,7 @@ var DracoDecoderModule = (() => {
                                 while (1) {
                                   g = F[(d + 4) >> 2]
                                   if (h >>> 0 <= g >>> 0) {
-                                    g = (g >>> 0) % (h >>> 0) | 0
+                                    g = ((g >>> 0) % (h >>> 0)) | 0
                                   }
                                   o: {
                                     if ((f | 0) == (g | 0)) {
@@ -25941,7 +25948,7 @@ var DracoDecoderModule = (() => {
                       e = i
                       break d
                     }
-                    e = (i >>> 0) % (f >>> 0) | 0
+                    e = ((i >>> 0) % (f >>> 0)) | 0
                   }
                   e = (F[b >> 2] + (e << 2)) | 0
                   d = F[e >> 2]
@@ -25966,7 +25973,7 @@ var DracoDecoderModule = (() => {
                           if (d >>> 0 < f >>> 0) {
                             break s
                           }
-                          d = (d >>> 0) % (f >>> 0) | 0
+                          d = ((d >>> 0) % (f >>> 0)) | 0
                         }
                         d = (F[b >> 2] + (d << 2)) | 0
                         break r
@@ -26010,16 +26017,16 @@ var DracoDecoderModule = (() => {
                             if ((k | 0) == -1) {
                               break d
                             }
-                            if ((Wc(a, (((k >>> 0) % 3 | 0 ? -1 : 2) + k) | 0) | 0) == -1) {
+                            if ((Wc(a, ((((k >>> 0) % 3) | 0 ? -1 : 2) + k) | 0) | 0) == -1) {
                               break a
                             }
                             c = (k + 1) | 0
-                            d = (c >>> 0) % 3 | 0 ? c : (k - 2) | 0
+                            d = ((c >>> 0) % 3) | 0 ? c : (k - 2) | 0
                             if ((d | 0) == -1) {
                               break a
                             }
                             c = (d + 1) | 0
-                            c = (c >>> 0) % 3 | 0 ? c : (d - 2) | 0
+                            c = ((c >>> 0) % 3) | 0 ? c : (d - 2) | 0
                             if ((c | 0) == -1) {
                               break a
                             }
@@ -26028,7 +26035,7 @@ var DracoDecoderModule = (() => {
                               break a
                             }
                             c = (d + 1) | 0
-                            c = (c >>> 0) % 3 | 0 ? c : (d - 2) | 0
+                            c = ((c >>> 0) % 3) | 0 ? c : (d - 2) | 0
                             if ((c | 0) == -1) {
                               break a
                             }
@@ -26103,7 +26110,7 @@ var DracoDecoderModule = (() => {
                                         break g
                                       }
                                       d = (c + 1) | 0
-                                      c = (d >>> 0) % 3 | 0 ? d : (c - 2) | 0
+                                      c = ((d >>> 0) % 3) | 0 ? d : (c - 2) | 0
                                       break i
                                     }
                                     k = l ? k : c
@@ -26111,7 +26118,7 @@ var DracoDecoderModule = (() => {
                                       c = -1
                                       break g
                                     }
-                                    if ((c >>> 0) % 3 | 0) {
+                                    if (((c >>> 0) % 3) | 0) {
                                       d = (c - 1) | 0
                                       break h
                                     }
@@ -26127,7 +26134,7 @@ var DracoDecoderModule = (() => {
                                 h = -1
                                 f = -1
                                 e = (d + 1) | 0
-                                e = (e >>> 0) % 3 | 0 ? e : (d - 2) | 0
+                                e = ((e >>> 0) % 3) | 0 ? e : (d - 2) | 0
                                 if ((e | 0) >= 0) {
                                   f = ((e >>> 0) / 3) | 0
                                   f = F[(((F[(F[a >> 2] + 96) >> 2] + L(f, 12)) | 0) + ((e - L(f, 3)) << 2)) >> 2]
@@ -26136,7 +26143,7 @@ var DracoDecoderModule = (() => {
                                   if ((c | 0) == -1) {
                                     break j
                                   }
-                                  i = (((c >>> 0) % 3 | 0 ? -1 : 2) + c) | 0
+                                  i = ((((c >>> 0) % 3) | 0 ? -1 : 2) + c) | 0
                                   if ((i | 0) < 0) {
                                     break j
                                   }
@@ -26149,7 +26156,7 @@ var DracoDecoderModule = (() => {
                                 }
                                 k: {
                                   l: {
-                                    f = (((d >>> 0) % 3 | 0 ? -1 : 2) + d) | 0
+                                    f = ((((d >>> 0) % 3) | 0 ? -1 : 2) + d) | 0
                                     if ((f | 0) >= 0) {
                                       d = ((f >>> 0) / 3) | 0
                                       if ((c | 0) != -1) {
@@ -26168,7 +26175,7 @@ var DracoDecoderModule = (() => {
                                   d = F[(((F[(F[a >> 2] + 96) >> 2] + L(d, 12)) | 0) + ((f - L(d, 3)) << 2)) >> 2]
                                 }
                                 f = (c + 1) | 0
-                                e = (f >>> 0) % 3 | 0 ? f : (c - 2) | 0
+                                e = ((f >>> 0) % 3) | 0 ? f : (c - 2) | 0
                                 if ((e | 0) >= 0) {
                                   f = ((e >>> 0) / 3) | 0
                                   f = F[(((F[(F[a >> 2] + 96) >> 2] + L(f, 12)) | 0) + ((e - L(f, 3)) << 2)) >> 2]
@@ -26197,7 +26204,7 @@ var DracoDecoderModule = (() => {
                             g = F[l >> 2]
                             d = (F[(a + 56) >> 2] + ((g >>> 3) & 536870908)) | 0
                             c = F[d >> 2]
-                            ;(o = d), (p = oi(g) & c), (F[o >> 2] = p)
+                            ;((o = d), (p = oi(g) & c), (F[o >> 2] = p))
                             F[(j + 12) >> 2] = l
                             break a
                           }
@@ -26240,11 +26247,11 @@ var DracoDecoderModule = (() => {
                       g = F[(l + i) >> 2]
                       b = (e + ((g >>> 3) & 536870908)) | 0
                       a = F[b >> 2]
-                      ;(o = b), (p = oi(g) & a), (F[o >> 2] = p)
+                      ;((o = b), (p = oi(g) & a), (F[o >> 2] = p))
                       g = F[(i + (l | 4)) >> 2]
                       b = (e + ((g >>> 3) & 536870908)) | 0
                       a = F[b >> 2]
-                      ;(o = b), (p = oi(g) & a), (F[o >> 2] = p)
+                      ;((o = b), (p = oi(g) & a), (F[o >> 2] = p))
                       d = (d + 2) | 0
                       c = (c + 2) | 0
                       if ((f | 0) != (c | 0)) {
@@ -26259,7 +26266,7 @@ var DracoDecoderModule = (() => {
                   c = F[(i + (d << 2)) >> 2]
                   b = (e + ((c >>> 3) & 536870908)) | 0
                   a = F[b >> 2]
-                  ;(o = b), (p = oi(c) & a), (F[o >> 2] = p)
+                  ;((o = b), (p = oi(c) & a), (F[o >> 2] = p))
                 }
               }
               function pd(a, b) {
@@ -26298,7 +26305,7 @@ var DracoDecoderModule = (() => {
                   e = -1
                   d = F[(a + 4) >> 2]
                   c = (b + 1) | 0
-                  i = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                  i = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                   if ((i | 0) != -1) {
                     e = F[(F[d >> 2] + (i << 2)) >> 2]
                   }
@@ -26379,7 +26386,7 @@ var DracoDecoderModule = (() => {
                                     break h
                                   }
                                   c = (d + 1) | 0
-                                  c = (c >>> 0) % 3 | 0 ? c : (d - 2) | 0
+                                  c = ((c >>> 0) % 3) | 0 ? c : (d - 2) | 0
                                   if ((c | 0) == -1) {
                                     break h
                                   }
@@ -26395,13 +26402,13 @@ var DracoDecoderModule = (() => {
                               F[h >> 2] = f | g
                               Ka(j, e, b)
                               c = (d + 1) | 0
-                              if ((((c >>> 0) % 3 | 0 ? c : (d - 2) | 0) | 0) == -1) {
+                              if (((((c >>> 0) % 3) | 0 ? c : (d - 2) | 0) | 0) == -1) {
                                 break f
                               }
                               c = (b - 2) | 0
                               d = (b + 1) | 0
                               b = -1
-                              c = (d >>> 0) % 3 | 0 ? d : c
+                              c = ((d >>> 0) % 3) | 0 ? d : c
                               if ((c | 0) != -1) {
                                 b = F[(F[(F[(a + 4) >> 2] + 12) >> 2] + (c << 2)) >> 2]
                               }
@@ -26415,13 +26422,13 @@ var DracoDecoderModule = (() => {
                             c = -1
                             g = F[(a + 4) >> 2]
                             d = (b + 1) | 0
-                            d = (d >>> 0) % 3 | 0 ? d : (b - 2) | 0
+                            d = ((d >>> 0) % 3) | 0 ? d : (b - 2) | 0
                             if ((d | 0) != -1) {
                               c = F[(F[(g + 12) >> 2] + (d << 2)) >> 2]
                             }
                             i: {
                               j: {
-                                if ((b >>> 0) % 3 | 0) {
+                                if (((b >>> 0) % 3) | 0) {
                                   e = (b - 1) | 0
                                   break j
                                 }
@@ -29537,8 +29544,8 @@ var DracoDecoderModule = (() => {
                     break a
                   }
                   f = (b + 1) | 0
-                  F[(i + 4) >> 2] = (f >>> 0) % 3 | 0 ? f : (b - 2) | 0
-                  if ((b >>> 0) % 3 | 0) {
+                  F[(i + 4) >> 2] = ((f >>> 0) % 3) | 0 ? f : (b - 2) | 0
+                  if (((b >>> 0) % 3) | 0) {
                     f = (b - 1) | 0
                     break a
                   }
@@ -29917,7 +29924,7 @@ var DracoDecoderModule = (() => {
                               k = (a - g) | 0
                               j = F[(d + 8) >> 2]
                               if (k >>> 0 <= (j - i) >>> 0) {
-                                ;(n = d), (o = (ma(i, 0, k) + k) | 0), (F[(n + 4) >> 2] = o)
+                                ;((n = d), (o = (ma(i, 0, k) + k) | 0), (F[(n + 4) >> 2] = o))
                                 break f
                               }
                               if ((a | 0) < 0) {
@@ -30093,7 +30100,7 @@ var DracoDecoderModule = (() => {
                               k = (a - g) | 0
                               j = F[(d + 8) >> 2]
                               if (k >>> 0 <= (j - i) >>> 0) {
-                                ;(n = d), (o = (ma(i, 0, k) + k) | 0), (F[(n + 4) >> 2] = o)
+                                ;((n = d), (o = (ma(i, 0, k) + k) | 0), (F[(n + 4) >> 2] = o))
                                 break f
                               }
                               if ((a | 0) < 0) {
@@ -31493,9 +31500,9 @@ var DracoDecoderModule = (() => {
                     break a
                   }
                   d = (b + 1) | 0
-                  f = (d >>> 0) % 3 | 0 ? d : (b - 2) | 0
+                  f = ((d >>> 0) % 3) | 0 ? d : (b - 2) | 0
                   d = (b - 1) | 0
-                  if ((b >>> 0) % 3 | 0) {
+                  if (((b >>> 0) % 3) | 0) {
                     break a
                   }
                   d = (b + 2) | 0
@@ -33424,7 +33431,7 @@ var DracoDecoderModule = (() => {
                           g = (c - d) | 0
                           e = F[(a + 8) >> 2]
                           if (g >>> 0 <= (e - f) >>> 0) {
-                            ;(i = a), (j = (ma(f, 0, g) + g) | 0), (F[(i + 4) >> 2] = j)
+                            ;((i = a), (j = (ma(f, 0, g) + g) | 0), (F[(i + 4) >> 2] = j))
                             break c
                           }
                           if ((c | 0) < 0) {
@@ -33465,7 +33472,7 @@ var DracoDecoderModule = (() => {
                           d = (c - g) | 0
                           h = F[(a + 8) >> 2]
                           if (d >>> 0 <= (h - e) >>> 0) {
-                            ;(i = a), (j = (ma(e, 0, d) + d) | 0), (F[(i + 4) >> 2] = j)
+                            ;((i = a), (j = (ma(e, 0, d) + d) | 0), (F[(i + 4) >> 2] = j))
                             break d
                           }
                           if ((c | 0) < 0) {
@@ -34537,7 +34544,7 @@ var DracoDecoderModule = (() => {
                     break a
                   }
                   c = (b + 1) | 0
-                  c = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                  c = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                   d = -1
                   if ((c | 0) == -1) {
                     break a
@@ -34552,7 +34559,7 @@ var DracoDecoderModule = (() => {
                     if (!e) {
                       d: {
                         e: {
-                          if ((b >>> 0) % 3 | 0) {
+                          if (((b >>> 0) % 3) | 0) {
                             e = (b - 1) | 0
                             break e
                           }
@@ -34575,7 +34582,7 @@ var DracoDecoderModule = (() => {
                       a = (((b >>> 3) & 536870908) + g) | 0
                       F[a >> 2] = F[a >> 2] | (1 << b)
                       a = (b + 1) | 0
-                      a = (a >>> 0) % 3 | 0 ? a : (b - 2) | 0
+                      a = ((a >>> 0) % 3) | 0 ? a : (b - 2) | 0
                       if ((a | 0) != -1) {
                         d = F[(F[f >> 2] + (a << 2)) >> 2]
                       }
@@ -34583,7 +34590,7 @@ var DracoDecoderModule = (() => {
                       F[a >> 2] = F[a >> 2] | (1 << d)
                       f: {
                         g: {
-                          if ((b >>> 0) % 3 | 0) {
+                          if (((b >>> 0) % 3) | 0) {
                             b = (b - 1) | 0
                             break g
                           }
@@ -35182,7 +35189,7 @@ var DracoDecoderModule = (() => {
                               break e
                             }
                             c = (b + 1) | 0
-                            b = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                            b = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                             if ((b | 0) == -1) {
                               break e
                             }
@@ -35195,7 +35202,7 @@ var DracoDecoderModule = (() => {
                           break c
                         }
                         c = (b + 1) | 0
-                        b = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                        b = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                         F[(a + 8) >> 2] = b
                         if ((b | 0) != -1) {
                           break b
@@ -35208,7 +35215,7 @@ var DracoDecoderModule = (() => {
                           break f
                         }
                         g: {
-                          if ((c >>> 0) % 3 | 0) {
+                          if (((c >>> 0) % 3) | 0) {
                             c = (c - 1) | 0
                             break g
                           }
@@ -35224,7 +35231,7 @@ var DracoDecoderModule = (() => {
                           break f
                         }
                         b = (c - 1) | 0
-                        if ((c >>> 0) % 3 | 0) {
+                        if (((c >>> 0) % 3) | 0) {
                           break f
                         }
                         b = (c + 2) | 0
@@ -35245,7 +35252,7 @@ var DracoDecoderModule = (() => {
                       break h
                     }
                     i: {
-                      if ((b >>> 0) % 3 | 0) {
+                      if (((b >>> 0) % 3) | 0) {
                         b = (b - 1) | 0
                         break i
                       }
@@ -35261,7 +35268,7 @@ var DracoDecoderModule = (() => {
                       break h
                     }
                     c = (b - 1) | 0
-                    if ((b >>> 0) % 3 | 0) {
+                    if (((b >>> 0) % 3) | 0) {
                       break h
                     }
                     c = (b + 2) | 0
@@ -35780,7 +35787,7 @@ var DracoDecoderModule = (() => {
                     }
                     e = F[(F[(F[(a + 4) >> 2] + 12) >> 2] + (b << 2)) >> 2]
                     c = (b + 1) | 0
-                    c = (c >>> 0) % 3 | 0 ? c : (b - 2) | 0
+                    c = ((c >>> 0) % 3) | 0 ? c : (b - 2) | 0
                     if ((c | 0) >= 0) {
                       f = ((c >>> 0) / 3) | 0
                       f = F[(((F[(F[a >> 2] + 96) >> 2] + L(f, 12)) | 0) + ((c - L(f, 3)) << 2)) >> 2]
@@ -35789,7 +35796,7 @@ var DracoDecoderModule = (() => {
                       if ((e | 0) == -1) {
                         break c
                       }
-                      c = (((e >>> 0) % 3 | 0 ? -1 : 2) + e) | 0
+                      c = ((((e >>> 0) % 3) | 0 ? -1 : 2) + e) | 0
                       if ((c | 0) < 0) {
                         break c
                       }
@@ -35802,7 +35809,7 @@ var DracoDecoderModule = (() => {
                     }
                     f = -1
                     d: {
-                      b = (((b >>> 0) % 3 | 0 ? -1 : 2) + b) | 0
+                      b = ((((b >>> 0) % 3) | 0 ? -1 : 2) + b) | 0
                       if ((b | 0) >= 0) {
                         d = ((b >>> 0) / 3) | 0
                         d = F[(((F[(F[a >> 2] + 96) >> 2] + L(d, 12)) | 0) + ((b - L(d, 3)) << 2)) >> 2]
@@ -35818,7 +35825,7 @@ var DracoDecoderModule = (() => {
                       break b
                     }
                     b = (e + 1) | 0
-                    b = (b >>> 0) % 3 | 0 ? b : (e - 2) | 0
+                    b = ((b >>> 0) % 3) | 0 ? b : (e - 2) | 0
                     if ((b | 0) < 0) {
                       break b
                     }
@@ -38073,7 +38080,7 @@ var DracoDecoderModule = (() => {
                       g = (b - d) | 0
                       f = F[(a + 8) >> 2]
                       if (g >>> 0 <= (f - c) >>> 0) {
-                        ;(h = a), (i = (ma(c, 0, g) + g) | 0), (F[(h + 4) >> 2] = i)
+                        ;((h = a), (i = (ma(c, 0, g) + g) | 0), (F[(h + 4) >> 2] = i))
                         break b
                       }
                       if ((b | 0) < 0) {
@@ -41314,7 +41321,7 @@ var DracoDecoderModule = (() => {
                 F[(d + 8) >> 2] = 0
                 F[(d + 4) >> 2] = c
                 F[d >> 2] = c
-                ;(e = a), (f = la((d + 12) | 0, b, (c + 1) | 0)), (F[(e + 4) >> 2] = f)
+                ;((e = a), (f = la((d + 12) | 0, b, (c + 1) | 0)), (F[(e + 4) >> 2] = f))
                 return a
               }
               function hc(a, b, c) {

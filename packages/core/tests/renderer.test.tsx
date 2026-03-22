@@ -716,9 +716,7 @@ describe('renderer', () => {
 
     for (let i = 0; i < 3; i++) {
       await act(async () =>
-        (
-          await root.configure()
-        ).render(
+        (await root.configure()).render(
           h(Suspense, null, {
             [PENDING_SLOT]: () => null,
             default: () => h(AsyncPrimitive, { object: i % 2 === 0 ? a : b }),
@@ -782,9 +780,7 @@ describe('renderer', () => {
     // Step 1: Mount unresolved A promise.
     // Pending slot content should be mounted, A not yet in scene.
     const store = await act(async () =>
-      (
-        await root.configure()
-      ).render(
+      (await root.configure()).render(
         renderSuspense(
           () => h(PendingContent),
           () => h(AsyncPrimitive, { key: ++asyncKey, object: aPromise }),
@@ -803,9 +799,7 @@ describe('renderer', () => {
     // A should be mounted and visible, pending content removed.
     await act(async () => resolveA!())
     await act(async () =>
-      (
-        await root.configure()
-      ).render(
+      (await root.configure()).render(
         renderSuspense(
           () => h(PendingContent),
           () => h(AsyncPrimitive, { key: asyncKey, object: aPromise }),
@@ -822,9 +816,7 @@ describe('renderer', () => {
     // Vue keeps old resolved content (A) visible while B loads in background.
     // Pending content is not shown during this default re-entrance path.
     await act(async () =>
-      (
-        await root.configure()
-      ).render(
+      (await root.configure()).render(
         renderSuspense(
           () => h(PendingContent),
           () => h(AsyncPrimitive, { key: ++asyncKey, object: bPromise }),
@@ -841,9 +833,7 @@ describe('renderer', () => {
     // B replaces A in the scene. Both objects' visibility stays true.
     await act(async () => resolveB!())
     await act(async () =>
-      (
-        await root.configure()
-      ).render(
+      (await root.configure()).render(
         renderSuspense(
           () => h(PendingContent),
           () => h(AsyncPrimitive, { key: asyncKey, object: bPromise }),
@@ -860,9 +850,7 @@ describe('renderer', () => {
     // Step 5: Remount resolved A promise.
     // Already-resolved promise completes immediately — no pending state.
     await act(async () =>
-      (
-        await root.configure()
-      ).render(
+      (await root.configure()).render(
         renderSuspense(
           () => h(PendingContent),
           () => h(AsyncPrimitive, { key: ++asyncKey, object: aPromise }),

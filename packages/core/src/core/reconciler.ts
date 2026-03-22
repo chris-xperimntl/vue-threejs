@@ -30,11 +30,12 @@ export interface Catalogue {
 // TODO: handle constructor overloads
 // https://github.com/pmndrs/vue-three-fiber/pull/2931
 // https://github.com/microsoft/TypeScript/issues/37079
-export type Args<T> = T extends ConstructorRepresentation<any>
-  ? T extends typeof Color
-    ? [r: number, g: number, b: number] | [color: ColorRepresentation]
-    : ConstructorParameters<T>
-  : any[]
+export type Args<T> =
+  T extends ConstructorRepresentation<any>
+    ? T extends typeof Color
+      ? [r: number, g: number, b: number] | [color: ColorRepresentation]
+      : ConstructorParameters<T>
+    : any[]
 
 type ArgsProp<P> = {
   args?: P extends ConstructorRepresentation<any> ? Args<P> : any[]
@@ -173,10 +174,11 @@ function validateInstance(type: string, props: InstanceProps & Record<string, un
   const name = toPascalCase(type)
   const target = catalogue[name]
 
-  if (type !== 'primitive' && !target)
+  if (type !== 'primitive' && !target) {
     throw new Error(
       `V3F: ${name} is not part of the THREE namespace! Did you forget to extend? See: https://docs.pmnd.rs/vue-three-fiber/api/objects#using-3rd-party-objects-declaratively`,
     )
+  }
 
   if (type === 'primitive' && !props.object) throw new Error(`V3F: Primitives without 'object' are invalid!`)
 
@@ -553,8 +555,9 @@ const nodeOps: RendererOptions<Instance, Instance> = {
               typeof defaultObj === 'object' &&
               'dispose' in defaultObj &&
               typeof defaultObj.dispose === 'function'
-            )
+            ) {
               defaultObj.dispose()
+            }
           }
         }
       }

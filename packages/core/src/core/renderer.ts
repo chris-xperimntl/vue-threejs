@@ -247,8 +247,9 @@ export function createRoot<TCanvas extends HTMLCanvasElement | OffscreenCanvas>(
       // Set raycaster options
       const { params, ...options } = raycastOptions || {}
       if (!is.equ(options, raycaster, shallowLoose)) applyProps(raycaster, { ...options } as any)
-      if (!is.equ(params, raycaster.params, shallowLoose))
+      if (!is.equ(params, raycaster.params, shallowLoose)) {
         applyProps(raycaster, { params: { ...raycaster.params, ...params } } as any)
+      }
 
       // Create default camera, don't overwrite any user-set state
       if (!state.camera || (state.camera === lastCamera && !is.equ(lastCamera, cameraOptions, shallowLoose))) {
@@ -257,8 +258,8 @@ export function createRoot<TCanvas extends HTMLCanvasElement | OffscreenCanvas>(
         const camera = isCamera
           ? (cameraOptions as Camera)
           : orthographic
-          ? new THREE.OrthographicCamera(0, 0, 0, 0, 0.1, 1000)
-          : new THREE.PerspectiveCamera(75, 0, 0.1, 1000)
+            ? new THREE.OrthographicCamera(0, 0, 0, 0, 0.1, 1000)
+            : new THREE.PerspectiveCamera(75, 0, 0.1, 1000)
         if (!isCamera) {
           camera.position.z = 5
           if (cameraOptions) {
@@ -317,8 +318,9 @@ export function createRoot<TCanvas extends HTMLCanvasElement | OffscreenCanvas>(
       // Check pointer missed
       if (!state.onPointerMissed) state.set({ onPointerMissed })
       // Check performance
-      if (performance && !is.equ(performance, state.performance, shallowLoose))
+      if (performance && !is.equ(performance, state.performance, shallowLoose)) {
         state.set((state) => ({ performance: { ...state.performance, ...performance } }))
+      }
 
       // Set up XR (one time only!)
       if (!state.xr) {
@@ -394,8 +396,9 @@ export function createRoot<TCanvas extends HTMLCanvasElement | OffscreenCanvas>(
       if (state.flat !== flat) state.set(() => ({ flat }))
 
       // Set gl props
-      if (glConfig && !is.fun(glConfig) && !isRenderer(glConfig) && !is.equ(glConfig, gl, shallowLoose))
+      if (glConfig && !is.fun(glConfig) && !isRenderer(glConfig) && !is.equ(glConfig, gl, shallowLoose)) {
         applyProps(gl, glConfig as any)
+      }
 
       // Set locals
       onCreated = onCreatedCallback

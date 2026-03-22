@@ -219,8 +219,9 @@ export function createEvents(store: RootStore) {
       let eventObject: THREE.Object3D | null = hit.object
       // Bubble event up
       while (eventObject) {
-        if ((eventObject as Instance<THREE.Object3D>['object']).__v3f?.eventCount)
+        if ((eventObject as Instance<THREE.Object3D>['object']).__v3f?.eventCount) {
           intersections.push({ ...hit, eventObject })
+        }
         eventObject = eventObject.parent
       }
     }

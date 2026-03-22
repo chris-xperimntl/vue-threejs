@@ -189,13 +189,8 @@ type GLTFLike = { scene: THREE.Object3D }
 type LoaderInstance<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> =
   T extends ConstructorRepresentation<LoaderLike> ? InstanceType<T> : T
 
-export type LoaderResult<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> = Awaited<
-  ReturnType<LoaderInstance<T>['loadAsync']>
-> extends infer R
-  ? R extends GLTFLike
-    ? R & ObjectMap
-    : R
-  : never
+export type LoaderResult<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> =
+  Awaited<ReturnType<LoaderInstance<T>['loadAsync']>> extends infer R ? (R extends GLTFLike ? R & ObjectMap : R) : never
 
 export type Extensions<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> = (
   loader: LoaderInstance<T>,

@@ -14,7 +14,7 @@
     ]
   },
   "dependencies": {
-    "three-stdlib": "^2.35.16"
+    "three-stdlib": "^2.36.1"
   },
   "peerDependencies": {
     "vue": ">=3.3",

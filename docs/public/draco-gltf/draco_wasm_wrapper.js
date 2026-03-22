@@ -234,8 +234,9 @@ $jscomp.polyfill(
       'function' === typeof f
         ? (f = new f('unhandledrejection', { cancelable: !0 }))
         : 'function' === typeof q
-        ? (f = new q('unhandledrejection', { cancelable: !0 }))
-        : ((f = $jscomp.global.document.createEvent('CustomEvent')), f.initCustomEvent('unhandledrejection', !1, !0, f))
+          ? (f = new q('unhandledrejection', { cancelable: !0 }))
+          : ((f = $jscomp.global.document.createEvent('CustomEvent')),
+            f.initCustomEvent('unhandledrejection', !1, !0, f))
       f.promise = this
       f.reason = this.result_
       return u(f)
@@ -326,7 +327,7 @@ $jscomp.polyfill(
             }
             var w = [],
               B = 0
-            do w.push(void 0), B++, k(u.value).callWhenSettled_(v(w.length - 1), F), (u = q.next())
+            do (w.push(void 0), B++, k(u.value).callWhenSettled_(v(w.length - 1), F), (u = q.next()))
             while (!u.done)
           })
     }
@@ -767,10 +768,10 @@ var DracoDecoderModule = (function () {
       return 2 > e.length || 3 < e.length
         ? !1
         : 1 == e[0] && 0 <= e[1] && 5 >= e[1]
-        ? !0
-        : 0 != e[0] || 10 < e[1]
-        ? !1
-        : !0
+          ? !0
+          : 0 != e[0] || 10 < e[1]
+            ? !1
+            : !0
     }
     var Ta = Object.assign({}, a),
       ta = 'object' == typeof window,
@@ -803,7 +804,7 @@ var DracoDecoderModule = (function () {
         return '[Emscripten Module object]'
       }
     } else if (ta || fa)
-      fa
+      (fa
         ? (U = self.location.href)
         : 'undefined' != typeof document && document.currentScript && (U = document.currentScript.src),
         h && (U = h),
@@ -831,7 +832,7 @@ var DracoDecoderModule = (function () {
           }
           d.onerror = c
           d.send(null)
-        })
+        }))
     a.print || console.log.bind(console)
     var da = a.printErr || console.warn.bind(console)
     Object.assign(a, Ta)
@@ -926,7 +927,7 @@ var DracoDecoderModule = (function () {
         try {
           return a.instantiateWasm(d, e)
         } catch (g) {
-          da('Module.instantiateWasm callback failed with error: ' + g), ka(g)
+          ;(da('Module.instantiateWasm callback failed with error: ' + g), ka(g))
         }
       ;(function () {
         return ea ||
@@ -2087,7 +2088,7 @@ var DracoDecoderModule = (function () {
 'object' === typeof exports && 'object' === typeof module
   ? (module.exports = DracoDecoderModule)
   : 'function' === typeof define && define.amd
-  ? define([], function () {
-      return DracoDecoderModule
-    })
-  : 'object' === typeof exports && (exports.DracoDecoderModule = DracoDecoderModule)
+    ? define([], function () {
+        return DracoDecoderModule
+      })
+    : 'object' === typeof exports && (exports.DracoDecoderModule = DracoDecoderModule)

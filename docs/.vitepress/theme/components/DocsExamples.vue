@@ -30,7 +30,7 @@ interface DemoEntry {
   title: string
   height: number
   description: string
-  component: ReturnType<typeof defineAsyncComponent> | ReturnType<typeof import('vue')['defineComponent']>
+  component: ReturnType<typeof defineAsyncComponent> | ReturnType<(typeof import('vue'))['defineComponent']>
   source: string
   originalDemo?: {
     label: string
@@ -526,7 +526,9 @@ onBeforeUnmount(teardownStats)
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--vp-c-divider);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .docs-examples__preview:hover {
@@ -539,7 +541,8 @@ onBeforeUnmount(teardownStats)
   width: 100%;
   height: 320px;
   overflow: hidden;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 45%),
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 45%),
     linear-gradient(180deg, #12131b 0%, #191b24 100%);
 }
 
@@ -595,7 +598,9 @@ onBeforeUnmount(teardownStats)
   background: var(--vp-c-divider);
   cursor: pointer;
   padding: 0;
-  transition: background 0.15s ease, transform 0.15s ease;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
 }
 
 .docs-examples__dot:hover {
@@ -669,7 +674,9 @@ onBeforeUnmount(teardownStats)
   cursor: pointer;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
-  transition: color 0.18s ease, border-color 0.18s ease;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .docs-examples__view-tab:hover {
@@ -706,7 +713,9 @@ onBeforeUnmount(teardownStats)
   font-size: 1.4rem;
   cursor: pointer;
   border-radius: 6px;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .docs-examples__close:hover {
@@ -721,7 +730,8 @@ onBeforeUnmount(teardownStats)
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 45%),
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 45%),
     linear-gradient(180deg, #12131b 0%, #191b24 100%);
 }
 

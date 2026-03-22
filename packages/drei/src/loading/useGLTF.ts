@@ -53,7 +53,7 @@ export function useGLTF(url: string | Ref<string>, options?: UseGLTFOptions): Sh
       const dracoPath =
         typeof options.draco === 'string'
           ? options.draco
-          : defaults?.dracoPath ?? 'https://www.gstatic.com/draco/versioned/decoders/1.5.6/'
+          : (defaults?.dracoPath ?? 'https://www.gstatic.com/draco/versioned/decoders/1.5.6/')
       loader.setDRACOLoader(getDRACOLoader(dracoPath))
     }
 

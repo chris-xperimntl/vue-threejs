@@ -41,8 +41,8 @@ const SelectableMesh = defineComponent({
         props.geometry === 'sphere'
           ? h('sphereGeometry', { args: [0.6, 32, 32] })
           : props.geometry === 'torus'
-          ? h('torusGeometry', { args: [0.5, 0.2, 16, 32] })
-          : h('boxGeometry')
+            ? h('torusGeometry', { args: [0.5, 0.2, 16, 32] })
+            : h('boxGeometry')
 
       return h(
         'mesh',

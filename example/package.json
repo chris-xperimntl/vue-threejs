@@ -8,9 +8,9 @@
     "@bluera/vue-threejs-drei": "1.0.0",
     "@bluera/vue-threejs-postprocessing": "1.0.0",
     "postprocessing": ">=6.30",
-    "three": "^0.172.0",
-    "three-stdlib": "^2.35.16",
-    "vue": "^3.4.0"
+    "three": "^0.183.2",
+    "three-stdlib": "^2.36.1",
+    "vue": "^3.5.30"
   },
   "devDependencies": {
     "@types/three": "^0.172.0"
