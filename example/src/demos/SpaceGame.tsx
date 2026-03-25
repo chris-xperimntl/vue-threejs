@@ -601,17 +601,6 @@ const Drone = defineComponent({
         <mesh geometry={props.asset.nodes.Sphere_DroneGlowmat_0.geometry}>
           <primitive object={props.asset.materials.DroneGlowmat} attach="material" />
         </mesh>
-        <mesh geometry={props.asset.nodes.Sphere_DroneGlowmat_0.geometry} scale={[1.02, 1.02, 1.02]}>
-          <meshBasicMaterial
-            color="#7fd8ff"
-            transparent
-            opacity={0.55}
-            fog={false}
-            toneMapped={false}
-            blending={THREE.AdditiveBlending}
-            depthWrite={false}
-          />
-        </mesh>
         <mesh geometry={props.asset.nodes.Sphere_Body_0.geometry}>
           <meshPhongMaterial color="black" />
         </mesh>
@@ -646,28 +635,19 @@ const Explosion = defineComponent({
 
     useFrame(() => {
       if (game.paused.value && game.pendingStep.value === 0) return
-      updateExplosionMesh(white.object.value, whiteParticles, game.mutation.dummy, 0.04)
-      updateExplosionMesh(orange.object.value, orangeParticles, game.mutation.dummy, 0.022)
+      updateExplosionMesh(white.object.value, whiteParticles, game.mutation.dummy)
+      updateExplosionMesh(orange.object.value, orangeParticles, game.mutation.dummy)
     })
 
     return () => (
       <group position={props.position} scale={[props.scale, props.scale, props.scale]}>
         <instancedMesh ref={white.ref} args={[null, null, whiteParticles.length]} frustumCulled={false}>
-          <dodecahedronGeometry args={[12, 0]} />
-          <meshBasicMaterial
-            color="white"
-            transparent
-            opacity={1}
-            fog={false}
-            toneMapped={false}
-            blending={THREE.AdditiveBlending}
-            depthWrite={false}
-            depthTest={false}
-          />
+          <dodecahedronGeometry args={[10, 0]} />
+          <meshBasicMaterial color="white" transparent opacity={1} fog={false} />
         </instancedMesh>
         <instancedMesh ref={orange.ref} args={[null, null, orangeParticles.length]} frustumCulled={false}>
           <dodecahedronGeometry args={[10, 0]} />
-          <meshBasicMaterial color="orange" transparent opacity={0.65} fog={false} />
+          <meshBasicMaterial color="orange" transparent opacity={1} fog={false} />
         </instancedMesh>
       </group>
     )
@@ -687,7 +667,6 @@ function updateExplosionMesh(
   mesh: THREE.InstancedMesh | null,
   particles: Array<{ position: THREE.Vector3; normal: THREE.Vector3 }>,
   dummy: THREE.Object3D,
-  fade = 0.025,
 ) {
   if (!mesh) return
   particles.forEach((particle, index) => {
@@ -697,7 +676,7 @@ function updateExplosionMesh(
     mesh.setMatrixAt(index, dummy.matrix)
   })
   const material = mesh.material as THREE.Material & { opacity?: number }
-  if (typeof material.opacity === 'number') material.opacity = Math.max(0, material.opacity - fade)
+  if (typeof material.opacity === 'number') material.opacity = Math.max(0, material.opacity - 0.025)
   mesh.instanceMatrix.needsUpdate = true
 }
 
